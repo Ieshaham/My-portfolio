@@ -1,1 +1,1 @@
-# my-other-repo
+this is my first repo from 0
