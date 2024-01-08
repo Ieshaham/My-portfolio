@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  padding: 0;
+  overflow: hidden;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -12,6 +14,135 @@ code {
     monospace;
 }
 
-p {
-  color:red;
+.left-box {
+  background: linear-gradient(
+    to right,
+    mistyrose 1%,   /* Start with #ecebea at 0% */
+    #b1a7ab 25%,  /* Transition to #b1a7ab at 25% */
+    #8c8188 50%,  /* Transition to #8c8188 at 50% */
+    #695a7b 75%   /* Transition to #695a7b at 75% */
+  );
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.name {
+  font-size: 4.5rem;
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+  color: mistyrose;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-left: 40rem;
+}
+
+.slogan {
+  font-size: 23px;
+  color: mistyrose;
+  display: flex;
+  justify-content: center;
+  margin: 0 50px; 
+  white-space: pre-line;
+  margin-left: 42rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center; /* Center items vertically */
+  margin-top: 3rem;
+}
+
+button.resume,
+button.contact {
+  width: 9.7rem;
+  height: 3.7rem;
+  font-size: 20px;
+  border-radius: 17px;
+  border: 2px solid;
+  /* margin-right: 10rem;  */
+}
+
+button.resume {
+  background-color: #695a7b;
+  color: white;
+  border-color: mistyrose;
+  margin-right: 25px;
+}
+
+button.contact {
+  background-color: mistyrose;
+  color: #695a7b;
+  border-color: #695a7b;
+  margin-right: 15rem;;
+}
+
+button.resume:hover {
+  background-color: mistyrose;
+  color: #695a7b;
+}
+
+button.contact:hover {
+  background-color: #695a7b;
+  color: white;
+  border-color: mistyrose;
+}
+
+ul.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: mistyrose;
+  overflow: hidden;
+  text-align: right;
+}
+
+ul.navbar li {
+  display: inline-block;
+}
+
+ul.navbar li a {
+  display: block;
+  color: #695a7b;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin-left: 20px; 
+  border-bottom: 2px solid transparent; 
+  transition: border-bottom 0.3s; 
+}
+
+ul.navbar li a:hover {
+  border-bottom: 7px solid #695a7b; 
+}
+
+/* index.css */
+.arrow-container {
+  position: fixed;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  text-align: center;
+  width: 100%;
+  animation: bounce 2s infinite;
+}
+
+.arrow-icon {
+  font-size: 2rem;
+  color: #695a7b;
+}
+
+.arrow-icon:hover {
+  font-size: 2.3rem;
+  color:mistyrose;
 }
