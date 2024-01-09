@@ -9,6 +9,7 @@ const Home = () => {
     <div className='home-container'>
       <div className='left-box'>
         <h2>PLACE LOGO</h2>
+        <div className='page-wording'>
         <h2 className='name'>Iesha Ham</h2>
         <p className='slogan'>
           Hello, I'm a software engineer that<br />
@@ -18,6 +19,7 @@ const Home = () => {
         <div className='button-container'>
           <button className='resume'>Resume</button>
           <button className='contact'>Contact</button>
+        </div>
         </div>
       </div>
       {/* Styling for the arrow icon */}
