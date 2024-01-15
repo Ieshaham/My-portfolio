@@ -1,8 +1,14 @@
+/* src/index.css */
+
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+
+
 body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -35,7 +41,7 @@ body {
 
 .name {
   font-size: 4.5rem;
-  margin-top: 10rem;
+  margin-top: 14rem;
   display: flex;
   justify-content: center;
   color: mistyrose;
@@ -123,35 +129,51 @@ body {
 }
 
 button.resume,
-button.contact {
+.contact {
   width: 9.7rem;
   height: 3.7rem;
   font-size: 20px;
   border-radius: 17px;
   border: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content:center ;
 }
 
 button.resume {
   background-color: #695a7b;
-  color: white;
+  color: mistyrose;
   border-color: mistyrose;
   margin-right: 25px;
 }
 
-button.contact {
+button.resume:hover{
+  background-color: mistyrose;
+  color: #695a7b;
+}
+
+.contact {
   background-color: mistyrose;
   color: #695a7b;
   border-color: #695a7b;
   margin-right: 15rem;
+  text-align: center;
+ 
 }
 
+.contact:hover{
+  background-color: #695a7b;
+  border-color: mistyrose;
+  color: mistyrose;
+
+}
 @media only screen and (max-width: 600px) {
   .button-container {
     margin-top: 1rem;
   }
 
   button.resume,
-  button.contact {
+  .contact {
     width: 8rem;
     height: 3rem;
     font-size: 16px;
@@ -165,56 +187,34 @@ button.contact {
   }
 }
 
-
+a{
+  text-decoration: none;
+}
 /* navbar */
 
-ul.navbar {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  background-color: mistyrose;
-  overflow: hidden;
-  text-align: right;
+.navbar-custom {
+  background-color: mistyrose; 
 }
 
-ul.navbar li {
-  display: inline-block;
-}
-
-ul.navbar li a {
-  display: block;
-  color: #695a7b;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  margin-left: 20px; 
-  border-bottom: 2px solid transparent; 
-  transition: border-bottom 0.3s; 
-}
-
-ul.navbar li a:hover {
-  border-bottom: 7px solid #695a7b; 
-}
 
 /* arrow icon css */
 .arrow-container {
   position: fixed;
   bottom: 10%;
   left: 50%;
-  transform: translate(-50%, 50%);
   text-align: center;
-  width: 100%;
-  animation: bounce 2s infinite;
 }
 
-.arrow-icon {
-  font-size: 2rem;
+.bi-arrow-down-circle{
   color: #695a7b;
+  animation: bounce 2s infinite;
+  transform: translate(-50%, 50%);
 }
 
-.arrow-icon:hover {
-  font-size: 2.3rem;
-  color:mistyrose;
+.bi-arrow-down-circle:hover {
+  color: mistyrose; 
+  height: 40px;
+  width: 40px;
 }
 
 /* contact page css */
@@ -225,6 +225,7 @@ ul.navbar li a:hover {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  border-color: #695a7b;
 }
 
 .message-box {
@@ -250,13 +251,13 @@ ul.navbar li a:hover {
 
 
 .message-box h4 {
-  color: #b1a7ab;
+  color: #695a7b;
   font-size: 20px;
   margin-bottom: 2px;
 }
 
 .message-box h1 {
-  color: #b1a7ab;
+  color: #695a7b;
   font-size: 36px;
   margin-top: 5px;
 }
@@ -288,7 +289,7 @@ ul.navbar li a:hover {
 }
 
 .info button {
-  background-color: mistyrose;
+  background-color: #695a7b;
   color: black;
   padding: 12px;
   border: none;
@@ -302,3 +303,31 @@ ul.navbar li a:hover {
   color: #ffffff;
 } 
 
+
+
+/* ABOUT PAGE */
+
+.btn,.btn1{
+
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+  width: 65vh;
+  color: #695a7b;
+  border-color: #695a7b;
+  margin: auto;
+  margin-top: .5rem;
+  font-size: 25px;
+}
+
+.btn1{
+  margin-top: 4rem;
+  border-radius: 6px;
+}
+
+p.about-paragraphs{
+  height: 30vh;
+  margin: 3rem;
+}
