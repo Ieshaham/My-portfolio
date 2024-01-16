@@ -232,7 +232,7 @@ a{
   display: flex;
   max-width: 800px;
   width: 82%;
-  height: 72%;
+  height: 75%;
   padding: 20px;
   background-color: #f0f0f0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -305,29 +305,74 @@ a{
 
 
 
-/* ABOUT PAGE */
+/* ABOUT PAGE Carousel  */
 
-.btn,.btn1{
-
-  background-color: #f0f0f0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 15vh;
-  width: 65vh;
-  color: #695a7b;
-  border-color: #695a7b;
+#carouselExampleIndicators {
+  width: 75%;
   margin: auto;
-  margin-top: .5rem;
-  font-size: 25px;
+  margin-top: 40px; 
 }
 
-.btn1{
-  margin-top: 4rem;
-  border-radius: 6px;
+.carousel-inner {
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-p.about-paragraphs{
-  height: 30vh;
-  margin: 3rem;
+.carousel-item {
+  min-height: 350px; /* Adjust as needed */
+}
+
+/* Caption Styles */
+.carousel-caption {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 5px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.carousel-caption h5 {
+  color:#695a7b;
+}
+
+.carousel-caption p {
+  color: #695a7b;
+
+}
+
+/* Control Styles */
+.carousel-control-prev,
+.carousel-control-next {
+  font-size: 24px;
+  color: #695a7b;
+  background: none;
+  border: none;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  color: #b1a7ab;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #695a7b;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.offcanvas-body{
+  background-color: mistyrose;
+}
+
+/* PROJECT PAGE  */
+.first-project{
+  background-color: #f0f0f0;
+  height: 45%;
+  margin: auto;
+  margin-top: 5rem;
+  width: 75%;
+  border-radius: 12px;
+
 }

@@ -8,11 +8,13 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Projects from './components/Projects'
 
+
 const App = () => {
   return (
     <Router>
       <div>
         <Navbar />
+       
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
