@@ -305,12 +305,44 @@ a{
 
 
 
-/* ABOUT PAGE Carousel  */
+/* ABOUT PAGE */
+.education{
+  display:flex;
+  justify-content: space-around;
+  text-align: left;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
 
+.icons{
+  font-size: 5.5rem;
+  display: flex;
+  justify-content: space-around;
+  color: #695a7b;
+  margin-top: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.translate-infinite {
+  animation: translateInfinite 3s alternate infinite;
+}
+
+@keyframes translateInfinite {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+
+
+/* Carousel style */
 #carouselExampleIndicators {
   width: 75%;
   margin: auto;
   margin-top: 40px; 
+  border-radius: 10px;
 }
 
 .carousel-inner {
@@ -376,3 +408,5 @@ a{
   border-radius: 12px;
 
 }
+
+

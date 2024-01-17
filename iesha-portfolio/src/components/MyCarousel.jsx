@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { faHtml5,faCss3Alt,faJs,faReact,faNode } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function MyCarousel() {
+
   return (
     <div>
 <div id="carouselExampleIndicators" className="carousel slide">
@@ -23,21 +26,28 @@ function MyCarousel() {
     <div className="carousel-item">
     <div className="carousel-caption d-none d-md-block">
         <h5>My skills</h5>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
-            software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <div className='icons'>
+  <div className='html translate-infinite'><FontAwesomeIcon icon={faHtml5}  /></div>
+  <div className='css translate-infinite'><FontAwesomeIcon icon={faCss3Alt} /></div>
+  <div className='javascript translate-infinite'><FontAwesomeIcon icon={faJs} /></div>
+  <div className='react translate-infinite'><FontAwesomeIcon icon={faReact} /></div>
+  <div className='node translate-infinite'><FontAwesomeIcon icon={faNode} /></div>
+</div>
       </div>
     </div>
     <div className="carousel-item">
     <div className="carousel-caption d-none d-md-block">
         <h5>My Education</h5>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
-            software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <div className='education'>
+        <p className='mdc'> <b>Miami-Dade College</b> <br />
+          Bachelor's of Science in Information Systems Technology<br />
+          Concentration: Software Engineering<br />
+          Expexted Graduation : December 2025<br />
+        </p>
+        <p className='FIU'> <b>Florida International University</b> <br />
+        Bachelor's of Arts in Psychology<br />
+        </p>
+        </div>
       </div>
     </div>
   </div>
