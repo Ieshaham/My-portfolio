@@ -465,12 +465,15 @@ a {
   position: relative;
   align-items: center;
   padding: 20px;
+  background-color:#f0f0f0;
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   transition: opacity 0.5s ease-in-out; 
   top:5rem;
+  gap:10px;
+  
 }
 
 .first-project.fade-in {
@@ -483,25 +486,53 @@ a {
   line-height: 1.5;
   color: #333;
   left:2rem;
-  width:700px;
-  padding: 1rem;
-  margin: auto;
+  width:750px;
+  
 }
-
+p.first-title{
+  font-size: 18px;
+  position: relative;
+  top:15px;
+}
+p.voyage-hawk{
+  width:525px;
+ 
+  margin-bottom:3rem;
+}
 
 .applications-project1  {
   padding: 5px;
-  background-color:#695a7b;
+  
   color: black;
   border-radius: 5px;
-  width:38rem;
-  gap:2rem;
+  width:35rem;
   display: flex;
   flex-direction: row;
-  right: 2rem;
+  right: 3rem;
+  justify-content: space-evenly;
+  height: 2rem;
+  
 }
+.application {
+  margin-right: 10px; 
+  background-color:#695a7b;
+  height:35px;
+  width:85px;
+  border-radius: 6px;
+  text-align: center;
+  position: relative;
+  bottom: 12px;
+  justify-content: center;
+  display: flex;
+  
+  
+
+
+}
+
 
 .code,
 .demo {
   margin-top: 10px; /* Adjust margin as needed */
 }
+

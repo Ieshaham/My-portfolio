@@ -25,24 +25,29 @@ const Projects = () => {
   }, []);
 
   return (
+    
     <div>
+      
       <div className={`image-grid ${isFirstProjectVisible ? 'show-first' : ''}`}>
         <div className={`first-project ${isFirstProjectVisible ? 'fade-in' : ''}`}>
+        
           <img src={process.env.PUBLIC_URL + '/project1.png'} alt="Your Image" className='image1' />
 
           <div className='project-details'>
-            <p className='voyage-hawk'>Introducing Voyage Hawk, my responsive full-stack creation designed to revolutionize travel planning. 
-              This application, built with HTML, CSS, JavaScript, React, Node.js, Firebase, and Google's API, enables users to effortlessly craft travel itineraries 
-              and discover new destinations. With a sleek interface and dynamic functionality, Voyage Hawk offers a user-friendly platform for seamless travel exploration.</p>
+          <p className='first-title'><strong>Voyage Hawk</strong></p>
+            <p className='voyage-hawk'>A full-stack creation designed to revolutionize travel planning. 
+              This application enables users to effortlessly craft travel itineraries and discover new destinations. 
+              With a sleek interface and dynamic functionality, Voyage Hawk offers a user-friendly platform for seamless travel exploration.
+              </p>
 
             <div className='project1buttons'>
               <p className='applications-project1'>
-                <p>HTML/CSS</p>
-                <p>JavaScript</p>
-                <p>React</p>
-                <p>Google API</p>
-                <p>Node.js</p>
-                <p>Firebase</p>
+                <div className='application'>HTML/CSS </div>  
+                <div className='application'>JavaScript</div>
+                <div className='application'>React</div>
+                <div className='application'>Google API</div>
+                <div className='application'>Node.js</div>
+                <div className='application'>Firebase</div>
               </p>
             </div>
           </div>
