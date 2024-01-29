@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { faHtml5,faCss3Alt,faJs,faReact,faNodeJs,faGoogle } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 const Projects = () => {
   const [isFirstProjectVisible, setFirstProjectVisible] = useState(false);
@@ -26,7 +29,7 @@ const Projects = () => {
 
   return (
     
-    <div>
+    <div className='project1container'>
       
       <div className={`image-grid ${isFirstProjectVisible ? 'show-first' : ''}`}>
         <div className={`first-project ${isFirstProjectVisible ? 'fade-in' : ''}`}>
@@ -42,12 +45,12 @@ const Projects = () => {
 
             <div className='project1buttons'>
               <p className='applications-project1'>
-                <div className='application'>HTML/CSS </div>  
-                <div className='application'>JavaScript</div>
-                <div className='application'>React</div>
-                <div className='application'>Google API</div>
-                <div className='application'>Node.js</div>
-                <div className='application'>Firebase</div>
+                <div className='application'> <FontAwesomeIcon icon={faHtml5} />  </div>  
+                <div className='application'><FontAwesomeIcon icon={faJs} /></div>
+                <div className='application'><FontAwesomeIcon icon={faReact} /></div>
+                <div className='application'><FontAwesomeIcon icon={faGoogle} /></div>
+                <div className='application'><FontAwesomeIcon icon={faNodeJs} /></div>
+                {/* <div className='application'>Firebase</div> */}
               </p>
             </div>
           </div>

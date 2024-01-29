@@ -218,17 +218,22 @@ a {
   align-items: center;
   height: 100vh;
   border-color: #695a7b;
+  
 }
 
 .message-box {
   display: flex;
+  position: relative;
+  align-items: center;
+  top:2rem;
   max-width: 800px;
   width: 82%;
   height: 75%;
   padding: 20px;
   background-color: #f0f0f0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-left: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 
 }
 
@@ -335,27 +340,35 @@ a {
   width: 75%;
   margin: auto;
   margin-top: 40px;
-  border-radius: 10px;
+  box-shadow:  rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  top: 10rem;
+  
 }
 
 .carousel-inner {
   border-radius: 10px;
   overflow: hidden;
+
 }
 
 .carousel-item {
-  min-height: 350px;
-  /* Adjust as needed */
+  min-height: 250px;
+  
 }
 
 /* Caption Styles */
 .carousel-caption {
   background-color: #f0f0f0;
-  padding: 20px;
-  border-radius: 5px;
+  padding: 21px;
+  border-radius: 4px;
   bottom: 0;
   left: 0;
   right: 0;
+  min-height: 250px;
+  
+  
 }
 
 .carousel-caption h5 {
@@ -374,6 +387,7 @@ a {
   color: #695a7b;
   background: none;
   border: none;
+  bottom:7rem;
 }
 
 .carousel-control-prev:hover,
@@ -391,6 +405,51 @@ a {
 .offcanvas-body {
   background-color: mistyrose;
 }
+
+/* Responsive carousel */
+
+@media (max-width: 768px) {
+  #carouselExampleIndicators {
+    width: 100%;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    font-size: 18px;
+    bottom: 4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #carouselExampleIndicators {
+    color: #000;
+    
+  }
+
+
+
+  .carousel-caption {
+    background-color: #f0f0f0;
+    padding: 21px;
+    border-radius: 4px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-height: 250px;
+ 
+  }
+
+  
+  .carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+  }
+}
+
+
 
 /* PROJECT PAGE   */
 
@@ -493,41 +552,35 @@ p.first-title{
   font-size: 18px;
   position: relative;
   top:15px;
+  color: #695a7b;
 }
 p.voyage-hawk{
   width:525px;
+  color: #695a7b;
  
   margin-bottom:3rem;
 }
 
-.applications-project1  {
-  padding: 5px;
-  
-  color: black;
+ .applications-project1  {
   border-radius: 5px;
-  width:35rem;
+  width:40rem;
   display: flex;
   flex-direction: row;
-  right: 3rem;
-  justify-content: space-evenly;
-  height: 2rem;
-  
-}
+  justify-content: space-around;
+  height: 1rem;
+ }
+
 .application {
-  margin-right: 10px; 
-  background-color:#695a7b;
-  height:35px;
+  
+ font-size: 2rem;
   width:85px;
   border-radius: 6px;
   text-align: center;
   position: relative;
   bottom: 12px;
-  justify-content: center;
   display: flex;
-  
-  
-
-
+  right: 1rem;
+  color: #695a7b;
 }
 
 

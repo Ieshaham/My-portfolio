@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { faHtml5,faCss3Alt,faJs,faReact,faNode } from '@fortawesome/free-brands-svg-icons';
+import { faHtml5,faCss3Alt,faJs,faReact,faNodeJs } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 function MyCarousel() {
 
@@ -31,7 +33,7 @@ function MyCarousel() {
   <div className='css translate-infinite'><FontAwesomeIcon icon={faCss3Alt} /></div>
   <div className='javascript translate-infinite'><FontAwesomeIcon icon={faJs} /></div>
   <div className='react translate-infinite'><FontAwesomeIcon icon={faReact} /></div>
-  <div className='node translate-infinite'><FontAwesomeIcon icon={faNode} /></div>
+  <div className='node translate-infinite'><FontAwesomeIcon icon={faNodeJs} /></div>
 </div>
       </div>
     </div>
