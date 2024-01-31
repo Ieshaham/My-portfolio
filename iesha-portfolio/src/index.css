@@ -103,6 +103,7 @@ body {
   display: flex;
   width: 100vw;
   height: 100vh;
+  
 }
 
 .button-container {
@@ -189,25 +190,6 @@ a {
 
 
 
-/* arrow icon css */
-.arrow-container {
-  position: fixed;
-  bottom: 10%;
-  left: 50%;
-  text-align: center;
-}
-
-.bi-arrow-down-circle {
-  color: #695a7b;
-  animation: bounce 2s infinite;
-  transform: translate(-50%, 50%);
-}
-
-.bi-arrow-down-circle:hover {
-  color: mistyrose;
-  height: 40px;
-  width: 40px;
-}
 
 /* contact page css */
 
@@ -303,12 +285,27 @@ a {
 
 
 /* ABOUT PAGE */
+
+#carouselExampleIndicators{
+  max-height: 100vh; /* Set a maximum height to avoid overflow */
+  overflow-y: auto; /* Add a vertical scrollbar if needed */
+}
+
+.about-me-paragraph{
+  text-align: left;
+  width: 49rem;
+  position: relative;
+  left:7rem;
+  top:1rem;
+  font-size: 15px;
+}
 .education {
   display: flex;
   justify-content: space-around;
   text-align: left;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  
 }
 
 .icons {
@@ -321,16 +318,18 @@ a {
 }
 
 .translate-infinite {
-  animation: translateInfinite 3s alternate infinite;
+  animation: translateInfinite 3s ease-in-out infinite;
 }
 
 @keyframes translateInfinite {
-  from {
+  0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
   }
-
-  to {
-    transform: translateY(20px);
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
   }
 }
 
@@ -340,22 +339,20 @@ a {
   width: 75%;
   margin: auto;
   margin-top: 40px;
-  box-shadow:  rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Updated box-shadow */
   border: 1px solid #ccc;
   border-radius: 6px;
   top: 10rem;
-  
+  overflow: hidden; /* Ensure the overflow is hidden */
 }
 
 .carousel-inner {
   border-radius: 10px;
   overflow: hidden;
-
 }
 
 .carousel-item {
   min-height: 250px;
-  
 }
 
 /* Caption Styles */
@@ -367,8 +364,7 @@ a {
   left: 0;
   right: 0;
   min-height: 250px;
-  
-  
+  transition: background-color 0.3s; /* Added transition */
 }
 
 .carousel-caption h5 {
@@ -377,7 +373,6 @@ a {
 
 .carousel-caption p {
   color: #695a7b;
-
 }
 
 /* Control Styles */
@@ -387,7 +382,8 @@ a {
   color: #695a7b;
   background: none;
   border: none;
-  bottom:7rem;
+  bottom: 7rem;
+  transition: color 0.3s; /* Added transition */
 }
 
 .carousel-control-prev:hover,
@@ -407,10 +403,9 @@ a {
 }
 
 /* Responsive carousel */
-
 @media (max-width: 768px) {
   #carouselExampleIndicators {
-    width: 100%;
+    width: 80%;
   }
 
   .carousel-control-prev,
@@ -423,11 +418,12 @@ a {
 @media (max-width: 576px) {
   #carouselExampleIndicators {
     color: #000;
-    
+    z-index: 0;
   }
 
 
-
+  
+    
   .carousel-caption {
     background-color: #f0f0f0;
     padding: 21px;
@@ -436,23 +432,21 @@ a {
     left: 0;
     right: 0;
     min-height: 250px;
- 
+    text-align: center; /* Center text on smaller screens */
+    
   }
 
-  
   .carousel-item {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    
   }
 }
 
 
-
 /* PROJECT PAGE   */
-
+/* ... (existing styles) ... */
 
 .second-project {
   background-color: #f0f0f0;
@@ -462,37 +456,58 @@ a {
   width: 75%;
   border-radius: 12px;
   display: flex;
+  flex-direction: column; /* Change to column layout for smaller screens */
+  align-items: center; /* Center items horizontally */
 }
 
 
-.image1 {
+img.image1,
+img.image2 {
   align-items: flex-end;
   display: flex;
   right: 5rem;
   height: 12rem;
-  width: 20rem;
-  border-radius: 10px;
-
-
-}
-
-.image2 {
-  align-items: flex-end;
-  display: flex;
-  right: 5rem;
-  height: 12rem;
-  width: 20rem;
+  width: 100%; /* Adjust width to 100% for responsiveness */
   border-radius: 10px;
 }
-
 
 /* Projects.css */
 .image-grid {
   display: flex;
   justify-content: space-around;
-  align-items: column;
+  align-items: center; /* Fix typo, should be 'center' instead of 'column' */
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  img.image1,
+  img.image2 {
+    right: 0; /* Adjust right spacing for smaller screens */
+    width: 8rem;
+    height: 10rem;
+
+  }
+  .second-project {
+    top: 3rem; /* Further adjust top margin for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .second-project {
+    top: 1rem; /* Further adjust top margin for even smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .second-project {
+    top: 6rem; /* Adjust top margin for smaller screens */
+    width: 100%; /* Adjust width to 100% for responsiveness */
+  }
+
+  p.voyage-hawk {
+    font-size: 12px;
+  }
 }
 
 .show-first {
@@ -515,65 +530,76 @@ a {
   display: flex;
   flex-direction: column; /* Change to column layout */
   align-items: center; /* Center items horizontally */
-
   transition: opacity 0.5s ease-in-out;
+  width:15rem;
 }
 
 .first-project {
   display: flex;
+  flex-direction: column; /* Change to column layout for smaller screens */
   position: relative;
   align-items: center;
   padding: 20px;
-  background-color:#f0f0f0;
+  background-color: #f0f0f0;
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
-  transition: opacity 0.5s ease-in-out; 
-  top:5rem;
-  gap:10px;
-  
+  transition: opacity 0.5s ease-in-out;
+  gap: 10px;
+  left:15rem;
+  width: 22rem;
+  height:40rem;
 }
 
+.project-details{
+width:14rem;
+
+
+}
 .first-project.fade-in {
   opacity: 1;
 }
 
 .voyage-hawk {
   flex: 1; /* Takes remaining space */
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
   color: #333;
-  left:2rem;
-  width:750px;
-  
-}
-p.first-title{
-  font-size: 18px;
-  position: relative;
-  top:15px;
-  color: #695a7b;
-}
-p.voyage-hawk{
-  width:525px;
-  color: #695a7b;
- 
-  margin-bottom:3rem;
+  left: rem;
+  width: 400px;
 }
 
- .applications-project1  {
+p.first-title {
+  font-size: 18px;
+  position: relative;
+  top: 15px;
+  color: #695a7b;
+}
+
+p.voyage-hawk {
+  width: 300px;
+  color: #695a7b;
+  margin-bottom: 3rem;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  position: relative;
+  
+}
+
+.applications-project1 {
   border-radius: 5px;
-  width:40rem;
+  width: 40rem;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   height: 1rem;
- }
+}
 
 .application {
-  
- font-size: 2rem;
-  width:85px;
+  font-size: 2rem;
+  width: 85px;
   border-radius: 6px;
   text-align: center;
   position: relative;
@@ -583,9 +609,38 @@ p.voyage-hawk{
   color: #695a7b;
 }
 
-
 .code,
 .demo {
   margin-top: 10px; /* Adjust margin as needed */
+}
+
+.project1container {
+  width: 100%;
+  
+  position: relative;
+  top:15rem;
+}
+
+@media (max-width: 768px) {
+  .first-project {
+    top: 3rem;
+    display: flex;
+    position: relative;
+  }
+}
+
+@media (max-width: 576px) {
+  .first-project {
+    top: 1rem; /* Further adjust top margin for even smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .first-project {
+    padding: 10px;
+    top: 6rem; /* Adjust padding for smaller screens */
+    width: 100%;
+    display: flex;
+  }
 }
 

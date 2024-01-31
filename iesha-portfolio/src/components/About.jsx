@@ -1,5 +1,5 @@
-// About.js
 import React from 'react';
+import MyCarousel from './MyCarousel';
 
 // const About = () => {
 //   return (
@@ -53,7 +53,6 @@ import React from 'react';
 export default About; */}
 
 
-import MyCarousel from './MyCarousel';
 
 function App() {
   return (

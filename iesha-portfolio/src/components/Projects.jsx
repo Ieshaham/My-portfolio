@@ -29,30 +29,24 @@ const Projects = () => {
 
   return (
     
-    <div className='project1container'>
-      
-      <div className={`image-grid ${isFirstProjectVisible ? 'show-first' : ''}`}>
-        <div className={`first-project ${isFirstProjectVisible ? 'fade-in' : ''}`}>
-        
-          <img src={process.env.PUBLIC_URL + '/project1.png'} alt="Your Image" className='image1' />
-
-          <div className='project-details'>
-          <p className='first-title'><strong>Voyage Hawk</strong></p>
-            <p className='voyage-hawk'>A full-stack creation designed to revolutionize travel planning. 
-              This application enables users to effortlessly craft travel itineraries and discover new destinations. 
-              With a sleek interface and dynamic functionality, Voyage Hawk offers a user-friendly platform for seamless travel exploration.
+      <div className='project1container'>
+        <div className={`image-grid ${isFirstProjectVisible ? 'show-first' : ''}`}>
+          <div className={`first-project ${isFirstProjectVisible ? 'fade-in' : ''}`}>
+            <img src={process.env.PUBLIC_URL + '/project1.png'} alt="Your Image" className='image1' />
+            <div className='project-details'>
+              <p className='first-title'><strong>Voyage Hawk</strong></p>
+              <p className='voyage-hawk'>
+                A full-stack creation designed to revolutionize travel planning. This application enables users to effortlessly craft travel itineraries and discover new destinations. With a sleek interface and dynamic functionality, Voyage Hawk offers a user-friendly platform for seamless travel exploration.
               </p>
-
-            <div className='project1buttons'>
-              <p className='applications-project1'>
-                <div className='application'> <FontAwesomeIcon icon={faHtml5} />  </div>  
-                <div className='application'><FontAwesomeIcon icon={faJs} /></div>
-                <div className='application'><FontAwesomeIcon icon={faReact} /></div>
-                <div className='application'><FontAwesomeIcon icon={faGoogle} /></div>
-                <div className='application'><FontAwesomeIcon icon={faNodeJs} /></div>
-                {/* <div className='application'>Firebase</div> */}
-              </p>
-            </div>
+              <div className='project1buttons'>
+                <p className='applications-project1'>
+                  <div className='application'> <FontAwesomeIcon icon={faHtml5} />  </div>  
+                  <div className='application'><FontAwesomeIcon icon={faJs} /></div>
+                  <div className='application'><FontAwesomeIcon icon={faReact} /></div>
+                  <div className='application'><FontAwesomeIcon icon={faGoogle} /></div>
+                  <div className='application'><FontAwesomeIcon icon={faNodeJs} /></div>
+                </p>
+              </div>
           </div>
         </div>
         <div className={`second-project ${isSecondProjectVisible ? 'fade-in' : ''}`}>
