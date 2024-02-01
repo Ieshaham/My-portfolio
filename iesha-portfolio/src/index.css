@@ -293,12 +293,14 @@ a {
 
 .about-me-paragraph{
   text-align: left;
-  width: 49rem;
-  position: relative;
-  left:7rem;
+  width: auto;
+  margin: 0px 10rem;
+  display: flex;
+  flex-direction: column;
   top:1rem;
   font-size: 15px;
 }
+
 .education {
   display: flex;
   justify-content: space-around;
@@ -444,73 +446,89 @@ a {
   }
 }
 
+.application {
+  font-size: 2rem;
+  width: 85px;
+  position: relative;
+  bottom: 12px;
+  left:30px;
+  color: #695a7b;
+} 
+
+.applications-project1 {
+  border-radius: 5px;
+  width: 18rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 1rem;
+  gap:2rem;
+  
+}
 
 /* PROJECT PAGE   */
-/* ... (existing styles) ... */
 
-.second-project {
+
+
+.col {
+  opacity: 0; 
+  transition: opacity 0.5s ease; 
+}
+
+.visible {
+  opacity: 1; 
+}
+
+.hidden {
+  opacity: 0; 
+}
+
+.card-body{
   background-color: #f0f0f0;
-  height: 45%;
+  color:#695a7b;
+  border-radius: 0px 0px 10px 10px;
+  border: none;
+ 
+}
+
+.card{
+  height:25rem;
+  width:25rem;
   position: relative;
-  top: 6rem;
-  width: 75%;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column; /* Change to column layout for smaller screens */
-  align-items: center; /* Center items horizontally */
+  top:8rem;
+  margin: 2rem 5rem 4.5rem 4.5rem;
+  border: none;
+  
+}
+
+img{
+  border-radius: 10px 10px 0 0;
 }
 
 
-img.image1,
+
+
+/* img.image1,
 img.image2 {
-  align-items: flex-end;
+  align-items: center;
   display: flex;
-  right: 5rem;
   height: 12rem;
-  width: 100%; /* Adjust width to 100% for responsiveness */
-  border-radius: 10px;
+  width: 95%; 
+
 }
 
-/* Projects.css */
 .image-grid {
   display: flex;
   justify-content: space-around;
   align-items: center; /* Fix typo, should be 'center' instead of 'column' */
-  opacity: 0;
+  /* opacity: 0;
   transition: opacity 0.5s ease-in-out;
-}
+  
+} */
 
-@media (max-width: 768px) {
-  img.image1,
-  img.image2 {
-    right: 0; /* Adjust right spacing for smaller screens */
-    width: 8rem;
-    height: 10rem;
 
-  }
-  .second-project {
-    top: 3rem; /* Further adjust top margin for smaller screens */
-  }
-}
 
-@media (max-width: 576px) {
-  .second-project {
-    top: 1rem; /* Further adjust top margin for even smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .second-project {
-    top: 6rem; /* Adjust top margin for smaller screens */
-    width: 100%; /* Adjust width to 100% for responsiveness */
-  }
-
-  p.voyage-hawk {
-    font-size: 12px;
-  }
-}
-
-.show-first {
+/* .show-first {
   opacity: 1;
 }
 
@@ -526,49 +544,32 @@ img.image2 {
   transform: translateY(0);
 }
 
-.image-grid {
-  display: flex;
-  flex-direction: column; /* Change to column layout */
-  align-items: center; /* Center items horizontally */
-  transition: opacity 0.5s ease-in-out;
-  width:15rem;
-}
 
 .first-project {
-  display: flex;
-  flex-direction: column; /* Change to column layout for smaller screens */
-  position: relative;
-  align-items: center;
-  padding: 20px;
   background-color: #f0f0f0;
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
   transition: opacity 0.5s ease-in-out;
-  gap: 10px;
-  left:15rem;
-  width: 22rem;
-  height:40rem;
+  position: relative;
+  left:12rem;
+  width: 20rem;
+  
 }
-
+.projectcontainer1{
+  height:60rem;
+ 
+  top:25rem;
+}
 .project-details{
-width:14rem;
-
-
+width:15rem;
+align-items: center;
 }
+
 .first-project.fade-in {
   opacity: 1;
 }
 
-.voyage-hawk {
-  flex: 1; /* Takes remaining space */
-  font-size: 14px;
-  line-height: 1.5;
-  color: #333;
-  left: rem;
-  width: 400px;
-}
 
 p.first-title {
   font-size: 18px;
@@ -580,7 +581,6 @@ p.first-title {
 p.voyage-hawk {
   width: 300px;
   color: #695a7b;
-  margin-bottom: 3rem;
   text-align: left;
   display: flex;
   align-items: center;
@@ -590,10 +590,10 @@ p.voyage-hawk {
 
 .applications-project1 {
   border-radius: 5px;
-  width: 40rem;
+  width: 18rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 1rem;
 }
 
@@ -604,24 +604,19 @@ p.voyage-hawk {
   text-align: center;
   position: relative;
   bottom: 12px;
+  left:30px;
   display: flex;
   right: 1rem;
   color: #695a7b;
-}
+} */
 
-.code,
+/* .code,
 .demo {
-  margin-top: 10px; /* Adjust margin as needed */
-}
+  margin-top: 10px; 
+} */
 
-.project1container {
-  width: 100%;
-  
-  position: relative;
-  top:15rem;
-}
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .first-project {
     top: 3rem;
     display: flex;
@@ -631,16 +626,45 @@ p.voyage-hawk {
 
 @media (max-width: 576px) {
   .first-project {
-    top: 1rem; /* Further adjust top margin for even smaller screens */
+    top: 1rem; 
+  }
+} */
+
+/* @media (max-width: 480px) {
+  .first-project {
+    padding: 10px;
+    top: 6rem; 
+    width: 100%;
+    display: flex;
+  }
+} */
+
+/* @media (max-width: 576px) {
+  .second-project {
+    top: 1rem; 
   }
 }
 
 @media (max-width: 480px) {
-  .first-project {
-    padding: 10px;
-    top: 6rem; /* Adjust padding for smaller screens */
-    width: 100%;
-    display: flex;
+  .second-project {
+    top: 6rem; 
+    width: 100%; 
   }
-}
 
+  p.voyage-hawk {
+    font-size: 12px;
+  }
+} */
+
+/* @media (max-width: 768px) {
+  img.image1,
+  img.image2 {
+    right: 0; 
+    width: 8rem;
+    height: 10rem;
+
+  }
+  .second-project {
+    top: 3rem; 
+  }
+} */
