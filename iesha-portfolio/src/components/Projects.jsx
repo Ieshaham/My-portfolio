@@ -35,7 +35,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="row row-cols-1 row-cols-md-3 g-4">
+<div className="row row-cols-1 row-cols-md-3 g-4">
     <div className={`col ${isFirstProjectVisible ? 'visible' : 'hidden'}`}>
     <div class="card">
     <img src={process.env.PUBLIC_URL + '/project1.png'} alt="Your Image" className='image1' />

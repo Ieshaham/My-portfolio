@@ -475,19 +475,27 @@ a {
   transition: opacity 0.5s ease; 
 }
 
+/* Projects.css */
+
 .visible {
-  opacity: 1; 
+  /* Define styles for the visible state */
+  opacity: 1; /* Example: Make the element fully visible */
+  transform: translate(0, 0); /* Example: Reset any transformation */
 }
 
 .hidden {
-  opacity: 0; 
+  /* Define styles for the hidden state */
+  opacity: 0; /* Example: Make the element fully transparent */
+  transform: translate(-100%, 0); /* Example: Move the element outside the viewport */
 }
+
 
 .card-body{
   background-color: #f0f0f0;
   color:#695a7b;
   border-radius: 0px 0px 10px 10px;
   border: none;
+  margin: auto;
  
 }
 
@@ -496,7 +504,6 @@ a {
   width:25rem;
   position: relative;
   top:8rem;
-  margin: 2rem 5rem 4.5rem 4.5rem;
   border: none;
   
 }
@@ -505,7 +512,13 @@ img{
   border-radius: 10px 10px 0 0;
 }
 
-
+@media (max-width: 480px) {
+  .card-body{
+    position: relative;
+    bottom: 55px;
+  
+  }
+  }
 
 
 /* img.image1,
