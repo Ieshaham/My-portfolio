@@ -1,65 +1,72 @@
+
+
+
 import React from 'react';
-import MyCarousel from './MyCarousel';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHtml5, faCss3Alt, faJs, faReact, faNodeJs } from '@fortawesome/free-brands-svg-icons';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
-// const About = () => {
-//   return (
-//     <div>
-//    <div className="dropdown1">
-//   <button className="btn1 btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-//     Who I am
-//   </button>
-//   <ul className="dropdown-menu">
-//   <p className='about-paragraphs'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-//     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-//     ullamco laboris nisi ut aliquip ex ea commodo consequat.
-//     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-//     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-//   </ul>
-// </div>
-
-
-
-// <div className="dropdown2">
-//   <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-//     Skills
-//   </button>
-//   <ul className="dropdown-menu">
-//   <p className='about-paragraphs'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-//     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-//     ullamco laboris nisi ut aliquip ex ea commodo consequat.
-//     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-//     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-//   </ul>
-// </div>
-
-
-
-{/* <div className="dropdown3">
-  <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Education
-  </button>
-  <ul className="dropdown-menu">
-  <p className='about-paragraphs'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </ul>
-</div>
-    </div>
-  );
-};
-
-export default About; */}
-
-
-
-function App() {
+function MyAboutMe() {
   return (
-    <div>
-      <MyCarousel />
+    <div className="about-me-container">
+      <h5>Who I am!</h5>
+      <div className='about-me-paragraph'>
+        <p>
+          Hello! I'm Iesha, a recent college graduate with a Bachelor's degree in Psychology. Although my academic journey began in psychology, I discovered my true passion lies in technology, prompting me to return to school for Software Engineering. The dynamic world of coding and the opportunity to create user-friendly web applications have become my driving forces. From concept to implementation, I find joy in crafting seamless and intuitive interfaces.
+        </p>
+        <p>
+          I'm eager to explore roles that challenge me, foster continuous learning, and provide a platform to contribute to innovative projects. If you share a similar passion for technology or have exciting opportunities, I'd love to connect and embark on this journey together.
+        </p>
+      </div>
     </div>
   );
 }
 
-export default App;
+function MySkills() {
+  return (
+    <div className="skills-container">
+      <h5>My Skills</h5>
+      <div className='icons'>
+        <div className='html translate-infinite'><FontAwesomeIcon icon={faHtml5}  /></div>
+        <div className='css translate-infinite'><FontAwesomeIcon icon={faCss3Alt} /></div>
+        <div className='javascript translate-infinite'><FontAwesomeIcon icon={faJs} /></div>
+        <div className='react translate-infinite'><FontAwesomeIcon icon={faReact} /></div>
+        <div className='node translate-infinite'><FontAwesomeIcon icon={faNodeJs} /></div>
+      </div>
+    </div>
+  );
+}
+
+function MyEducation() {
+  return (
+    <div className="education-container">
+      <h5>My Education</h5>
+      <div className='education'>
+        <p className='mdc'>
+          <b>Miami-Dade College</b> <br />
+          Bachelor's of Science in Information Systems Technology<br />
+          Concentration: Software Engineering<br />
+          Expected Graduation: December 2025
+        </p>
+        <p className='FIU'>
+          <b>Florida International University</b> <br />
+          Bachelor's of Arts in Psychology
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function MyContent() {
+  return (
+    <div className="content-container">
+      <MyAboutMe />
+      <MySkills />
+      <MyEducation />
+    </div>
+  );
+}
+
+export default MyContent;
+
+

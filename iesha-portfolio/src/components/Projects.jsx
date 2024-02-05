@@ -6,7 +6,7 @@ const Projects = () => {
   const [isFirstProjectVisible, setFirstProjectVisible] = useState(false);
   const [isSecondProjectVisible, setSecondProjectVisible] = useState(false);
   const [isThirdProjectVisible, setThirdProjectVisible] = useState(false);
-  // const [isFourthProjectVisible, setFourthProjectVisible] = useState(false);
+  
   
   useEffect(() => {
     const timeout1 = setTimeout(() => {
@@ -21,16 +21,12 @@ const Projects = () => {
       setThirdProjectVisible(true);
     }, 1000);
 
-    // const timeout4 = setTimeout(() => {
-    //   setFourthProjectVisible(true);
-    // }, 1000);
-
-    // Clean up timeouts on component unmount
+ 
     return () => {
       clearTimeout(timeout1);
       clearTimeout(timeout2);
       clearTimeout(timeout3);
-      // clearTimeout(timeout4);
+     
     };
   }, []);
 
@@ -75,15 +71,7 @@ const Projects = () => {
       </div>
     </div>
   </div>
-  {/* <div className={`col ${isFourthProjectVisible ? 'visible' : 'hidden'}`}>
-    <div class="card">
-    <img src={process.env.PUBLIC_URL + '/project1.png'} alt="Your Image" className='image1' />
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div> */}
+
 </div>
     
     );

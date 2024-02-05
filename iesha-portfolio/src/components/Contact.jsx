@@ -27,7 +27,7 @@ const ContactPage = () => {
     <div className='message-box-container'>
       <div className='message-box'>
         <div className='info'>
-          <h4>GET IN TOUCH</h4>
+        <h5>GET IN TOUCH</h5>
           <h1>Contact Me!</h1>
           <form onSubmit={handleSubmit}>
             <label htmlFor="name" className="placeholder-label">
