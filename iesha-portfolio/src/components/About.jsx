@@ -25,7 +25,7 @@ function MyAboutMe() {
 function MySkills() {
   return (
     <div className="skills-container">
-      <h5>My Skills</h5>
+      <h5>Skills</h5>
       <div className='icons'>
         <div className='html translate-infinite'><FontAwesomeIcon icon={faHtml5}  /></div>
         <div className='css translate-infinite'><FontAwesomeIcon icon={faCss3Alt} /></div>
@@ -40,8 +40,9 @@ function MySkills() {
 function MyEducation() {
   return (
     <div className="education-container">
-      <h5>My Education</h5>
+      <h5>Education</h5>
       <div className='education'>
+      <div className="education-row">
         <p className='mdc'>
           <b>Miami-Dade College</b> <br />
           Bachelor's of Science in Information Systems Technology<br />
@@ -52,6 +53,7 @@ function MyEducation() {
           <b>Florida International University</b> <br />
           Bachelor's of Arts in Psychology
         </p>
+        </div>
       </div>
     </div>
   );

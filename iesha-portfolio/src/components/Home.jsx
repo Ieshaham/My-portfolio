@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Contact from './Contact';
 import About from './About';
@@ -19,10 +18,7 @@ const Home = () => {
             specializes in transforming ideas<br />
             into innovative solutions.
           </p>
-          <div className='button-container'>
-            <button className='resume'>Resume</button>
-            <Link to="/contact" className='contact'>Contact</Link>
-          </div>
+        
         </div>
 
         <h4 id="scrollspyHeading2"></h4>
@@ -30,7 +26,7 @@ const Home = () => {
         <h4 id="scrollspyHeading3">Project Applications</h4>
         <Projects />
         
-        <h4 id="scrollspyHeading5"></h4>
+        <h4 id="scrollspyHeading4"></h4>
         <Contact />
       </div>
     </div>

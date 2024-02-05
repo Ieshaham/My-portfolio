@@ -1,22 +1,32 @@
 import React from 'react';
 
-
 const Navbar = () => {
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <>
     <div className='navbar'>
-      <nav className="navbar navbar-light bg-light px-3">
+      <nav className="navbar">
         <a className="navbar-brand" href="www.google.com">
           Navbar
         </a>
         <ul className="nav nav-pills">
           <li className="nav-item">
-            <a className="nav-link" href="#scrollspyHeading1">
+          <a className="nav-link" onClick={() => handleScroll('scrollspyHeading1')} href="#scrollspyHeading2">
               About
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#scrollspyHeading2">
+            <a className="nav-link" onClick={() => handleScroll('scrollspyHeading2')} href="#scrollspyHeading2">
+              Resume
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" onClick={() => handleScroll('scrollspyHeading2')} href="#scrollspyHeading4">
               Contact
             </a>
           </li>
@@ -32,12 +42,12 @@ const Navbar = () => {
             </a>
             <ul className="dropdown-menu">
               <li>
-                <a className="dropdown-item" href="#scrollspyHeading3">
+                <a className="dropdown-item" onClick={() => handleScroll('scrollspyHeading3')} href="#scrollspyHeading3">
                   Voyage Hawk
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#scrollspyHeading4">
+                <a className="dropdown-item" onClick={() => handleScroll('scrollspyHeading4')} href="#scrollspyHeading3">
                   E-Portfolio
                 </a>
               </li>
@@ -45,7 +55,7 @@ const Navbar = () => {
                 <hr className="dropdown-divider" />
               </li>
               <li>
-                <a className="dropdown-item" href="#scrollspyHeading5">
+                <a className="dropdown-item" onClick={() => handleScroll('scrollspyHeading5')} href="#scrollspyHeading3">
                   Fifth
                 </a>
               </li>
@@ -53,8 +63,7 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
-      </div>
-    </>
+    </div>
   );
 };
 
