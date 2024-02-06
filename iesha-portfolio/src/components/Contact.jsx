@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -27,7 +26,7 @@ const ContactPage = () => {
     <div className='message-box-container'>
       <div className='message-box'>
         <div className='info'>
-        <h5>GET IN TOUCH</h5>
+          <h5>GET IN TOUCH</h5>
           <h1>Contact Me!</h1>
           <form onSubmit={handleSubmit}>
             <label htmlFor="name" className="placeholder-label">
@@ -44,11 +43,9 @@ const ContactPage = () => {
             </label>
             <button type="submit">Send Message</button>
           </form>
+          
         </div>
       </div>
-        {/* <div className="contact-image">
-          <img src="https://img.freepik.com/free-vector/email-notification-icon-isolated-white-background-vector-cartoon-illustration-envelope-with-letter-computer-screen-new-message-received-inbox-alert-business-software-design-element_107791-23706.jpg?w=740&t=st=1704812861~exp=1704813461~hmac=5a8c62fc39673184c1073f6e67775935ebbc84f44ae8700b45c4f1d05056f6d6" alt="Contact" />
-        </div> */}
     </div>
   );
 };

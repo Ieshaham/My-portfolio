@@ -81,14 +81,15 @@ a.nav-link{
   text-align: center;
   position: relative;
   top:8rem;
+
  
 }
 
 .name {
   font-size: 4.5rem;
   color: #f0f0f0;
+  font-family: 'Dancing Script', cursive;
 }
-
 
 a {
   text-decoration: none;
@@ -323,6 +324,11 @@ div.content-container{
 /* projects page */
 .card {
   margin: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover{
+  transform: scale(1.05); 
 }
 
 /* Responsive design */
@@ -346,9 +352,20 @@ div.content-container{
 
 .applications-project1 {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: space-around;
   align-items: center;
+ 
+}
+
+.applications-project2 {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
+  align-items: center;
+  margin: 27px;
+
+  
  
 }
 
@@ -361,9 +378,11 @@ div.application{
   color: #695a7b;
 }
 
+
 .applications-project1 > div {
   flex: 1;
   padding: 10px;
   box-sizing: border-box;
   margin: 10px; /* Add margin for spacing between items */
 }
+

@@ -57,8 +57,19 @@ const Projects = () => {
     <div class="card">
     <img src={process.env.PUBLIC_URL + '/project1.png'} alt="Your Image" className='image1' />
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h5 class="card-title">E-Portfolio</h5>
+        <p class="card-text">Explore my curated portfolio showcasing achievements in various technology domains. 
+        With a polished interface, navigate through projects reflecting my dedication to pioneering solutions in software development and creating user-friendly interfaces.</p>
+        <div className='project1buttons'>
+          <div className="applications-project2">
+                  <div className='application'> <FontAwesomeIcon icon={faHtml5} />  </div>  
+                  <div className='application'><FontAwesomeIcon icon={faCss3} /></div>
+                   <div className='application'><FontAwesomeIcon icon={faJs} /></div>
+                   <div className='application'><FontAwesomeIcon icon={faReact} /></div>
+                   
+                 
+                 </div>
+               </div>
       </div>
     </div>
   </div>
