@@ -86,7 +86,7 @@ a.nav-link{
 }
 
 .name {
-  font-size: 4.5rem;
+  font-size: 6rem;
   color: #f0f0f0;
   font-family: 'Dancing Script', cursive;
 }
@@ -107,7 +107,7 @@ a {
 }
 
 .slogan {
-  font-size: 23px;
+  font-size: 2rem;
   color: #f0f0f0;
   white-space: pre-line;
 
@@ -383,6 +383,29 @@ div.application{
   flex: 1;
   padding: 10px;
   box-sizing: border-box;
-  margin: 10px; /* Add margin for spacing between items */
+  margin: 10px; 
 }
 
+
+/* stroll to top */
+
+
+.scrollToTopButton {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  color: #f0f0f0; 
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  font-size: 35px;
+}
+
+.scrollToTopButton.show {
+  display: block;
+}
+
+.scrollToTopButton:hover {
+  color: #b1a7ab; 
+}

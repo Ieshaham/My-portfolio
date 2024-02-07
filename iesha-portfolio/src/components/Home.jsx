@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from './Navbar';
 import Contact from './Contact';
 import About from './About';
 import Projects from './Projects'
+import ScrollToTopButton from './ScrollToTop';
 
 const Home = () => {
   return (
@@ -29,6 +29,7 @@ const Home = () => {
         <h4 id="scrollspyHeading4"></h4>
         <Contact />
       </div>
+      <ScrollToTopButton />
     </div>
   );
 };
