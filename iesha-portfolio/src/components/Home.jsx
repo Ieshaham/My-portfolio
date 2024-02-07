@@ -12,9 +12,9 @@ const Home = () => {
       <div className="page-content">
         <h4 id="scrollspyHeading1"></h4>
         <div className='page-wording'>
-          <h2 className='name'>Iesha Ham</h2>
+         <i> <h2 className='name'>Hi, I'm Iesha. </h2></i>
           <p className='slogan'>
-            Hello, I'm a software engineer that<br />
+            A software engineer that<br />
             specializes in transforming ideas<br />
             into innovative solutions.
           </p>
