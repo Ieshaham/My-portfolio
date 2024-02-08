@@ -55,7 +55,7 @@ const Projects = () => {
   </div>
   <div className={`col ${isSecondProjectVisible ? 'visible' : 'hidden'}`}>
     <div class="card">
-    <img src={process.env.PUBLIC_URL + '/project1.png'} alt="Your Image" className='image1' />
+    <img src={process.env.PUBLIC_URL + '/Screenshot 2024-02-07 185153.png'} alt="Your Image" className='image2' />
       <div class="card-body">
         <h5 class="card-title">E-Portfolio</h5>
         <p class="card-text">Explore my curated portfolio showcasing achievements in various technology domains. 

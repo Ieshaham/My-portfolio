@@ -1,4 +1,6 @@
 import React from 'react';
+import { faLaptopCode } from '@fortawesome/free-solid-svg-icons'; // Corrected import statement
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Navbar = () => {
   const handleScroll = (id) => {
@@ -12,7 +14,7 @@ const Navbar = () => {
     <div className='navbar'>
       <nav className="navbar">
         <a className="navbar-brand" href="www.google.com">
-          Navbar
+        <FontAwesomeIcon icon={faLaptopCode} />
         </a>
         <ul className="nav nav-pills">
           <li className="nav-item">

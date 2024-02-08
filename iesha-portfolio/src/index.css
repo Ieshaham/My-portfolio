@@ -2,6 +2,7 @@
 
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
 
 
 body {
@@ -55,6 +56,22 @@ a.nav-link{
   
 }
 
+
+.navbar-brand{
+ font-size: 28px;
+  position: relative;
+  left:25px;
+  color: #695a7b;
+
+}
+
+.navbar-brand:hover{
+  color: #b1a7ab; 
+}
+
+.navbar:hover{
+  color:#b1a7ab;
+}
 .home-container{
   
   width: 100vw;
@@ -62,7 +79,7 @@ a.nav-link{
   overflow-y: auto; /* Add vertical scrollbar if necessary */
   background: linear-gradient(to right,
  
-  mistyrose 1%,
+  #ffe4e1 1%,
   
   #b1a7ab 25%,
  
@@ -412,4 +429,10 @@ div.application{
 
 .scrollToTopButton:hover {
   color: #b1a7ab; 
+}
+
+img{
+  height: 300px;
+
+
 }
