@@ -4,22 +4,30 @@ const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: '',
+    message: ''
   });
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Perform any validation here
 
-    // Send data to server (if needed)
+    // Perform form validation
+    if (!formData.name || !formData.email || !formData.message) {
+      alert('Please fill out all fields');
+      return;
+    }
+
+    // Send data to server (assuming you have a function sendEmailToServer)
+    // await sendEmailToServer(formData);
 
     // Provide feedback to the user
-    console.log('Form submitted:', formData);
+    setFormSubmitted(true);
+    setFormData({ name: '', email: '', message: '' });
   };
 
   return (
@@ -29,21 +37,21 @@ const ContactPage = () => {
           <h5>GET IN TOUCH</h5>
           <h1>Contact Me!</h1>
           <form onSubmit={handleSubmit}>
-            <label htmlFor="name" className="placeholder-label">
+            <label htmlFor='name' className='placeholder-label'>
               What's your name?
-              <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} />
+              <input type='text' id='name' name='name' value={formData.name} onChange={handleChange} />
             </label>
-            <label htmlFor="email" className="placeholder-label">
+            <label htmlFor='email' className='placeholder-label'>
               What's your email?
-              <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} />
+              <input type='email' id='email' name='email' value={formData.email} onChange={handleChange} />
             </label>
-            <label htmlFor="message" className="placeholder-label">
+            <label htmlFor='message' className='placeholder-label'>
               Message:
-              <textarea id="message" name="message" value={formData.message} onChange={handleChange} />
+              <textarea id='message' name='message' value={formData.message} onChange={handleChange} />
             </label>
-            <button type="submit">Send Message</button>
+            <button type='submit'>Send Message</button>
+            {formSubmitted && <p>Thank you for your message!</p>}
           </form>
-          
         </div>
       </div>
     </div>
