@@ -1,35 +1,31 @@
+
+
 import React, { useState } from 'react';
+import { datebase } from "../firebase";
+
 
 const ContactPage = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-  const [formSubmitted, setFormSubmitted] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
-  };
+const [name, setName] = usestate ("");
+const [email, setEmail] = usestate ("");
+const [message, setMessage] = usestate ("");
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+const handleSubmit = (e) => {
+  e.preventDefault();
+}
 
-    // Perform form validation
-    if (!formData.name || !formData.email || !formData.message) {
-      alert('Please fill out all fields');
-      return;
-    }
-
-    // Send data to server (assuming you have a function sendEmailToServer)
-    // await sendEmailToServer(formData);
-
-    // Provide feedback to the user
-    setFormSubmitted(true);
-    setFormData({ name: '', email: '', message: '' });
-  };
-
+datebase.collection("contacts").add({
+  name: name,
+  email: email,
+  message: message,
+})
+.then(() => {
+alert("Message has been submitted");
+})
+.catch((error) => {
+  alert(error.message)
+})
+};
   return (
     <div className='message-box-container'>
       <div className='message-box'>
@@ -49,7 +45,7 @@ const ContactPage = () => {
               Message:
               <textarea id='message' name='message' value={formData.message} onChange={handleChange} />
             </label>
-            <button type='submit'>Send Message</button>
+            <button type='submit' disabled={submitting}>{submitting ? 'Submitting...' : 'Send Message'}</button>
             {formSubmitted && <p>Thank you for your message!</p>}
           </form>
         </div>
