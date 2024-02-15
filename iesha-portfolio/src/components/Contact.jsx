@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { firestore } from './Firebase'; // Importing firestore from Firebase setup file
 
+
 const ContactPage = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -29,31 +30,40 @@ const ContactPage = () => {
   };
 
   return (
-    <form className='form' onSubmit={handleSubmit}>
-      <h1>Get in touch</h1>
+    <form className='contact-form' onSubmit={handleSubmit}>
+      <h1 className='form'>Connect with me!</h1>
+      <div className='form-container'>
+        <div className='form-group'>
+          <label>Name</label>
+          <input
+            type="text"
+            placeholder="Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
 
-      <label>Name</label>
-      <input
-        placeholder="Name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
+        <div className='form-group'>
+          <label>Email</label>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
 
-      <label>Email</label>
-      <input
-        placeholder='Email'
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
+        <div className='form-group'>
+          <label>Message</label>
+          <textarea
+            placeholder="Message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          ></textarea>
+        </div>
 
-      <label>Message</label>
-      <textarea
-        placeholder='Message'
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-      ></textarea>
-
-      <button type='submit'>Submit</button>
+        <button type='submit'>Submit</button>
+      </div>
     </form>
   );
 };
