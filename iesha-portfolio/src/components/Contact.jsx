@@ -1,56 +1,60 @@
-
-
 import React, { useState } from 'react';
-import { datebase } from "../firebase";
-
+import { firestore } from './Firebase'; // Importing firestore from Firebase setup file
 
 const ContactPage = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-const [name, setName] = usestate ("");
-const [email, setEmail] = usestate ("");
-const [message, setMessage] = usestate ("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-const handleSubmit = (e) => {
-  e.preventDefault();
-}
+    // Add data to Firestore collection
+    firestore.collection("contacts").add({
+      name: name,
+      email: email,
+      message: message,
+    })
+    .then(() => {
+      alert("Message has been submitted");
+    })
+    .catch((error) => {
+      alert("An error occurred while submitting the message: " + error.message);
+    });
 
-datebase.collection("contacts").add({
-  name: name,
-  email: email,
-  message: message,
-})
-.then(() => {
-alert("Message has been submitted");
-})
-.catch((error) => {
-  alert(error.message)
-})
-};
+    // Clear input fields after submission
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
+
   return (
-    <div className='message-box-container'>
-      <div className='message-box'>
-        <div className='info'>
-          <h5>GET IN TOUCH</h5>
-          <h1>Contact Me!</h1>
-          <form onSubmit={handleSubmit}>
-            <label htmlFor='name' className='placeholder-label'>
-              What's your name?
-              <input type='text' id='name' name='name' value={formData.name} onChange={handleChange} />
-            </label>
-            <label htmlFor='email' className='placeholder-label'>
-              What's your email?
-              <input type='email' id='email' name='email' value={formData.email} onChange={handleChange} />
-            </label>
-            <label htmlFor='message' className='placeholder-label'>
-              Message:
-              <textarea id='message' name='message' value={formData.message} onChange={handleChange} />
-            </label>
-            <button type='submit' disabled={submitting}>{submitting ? 'Submitting...' : 'Send Message'}</button>
-            {formSubmitted && <p>Thank you for your message!</p>}
-          </form>
-        </div>
-      </div>
-    </div>
+    <form className='form' onSubmit={handleSubmit}>
+      <h1>Get in touch</h1>
+
+      <label>Name</label>
+      <input
+        placeholder="Name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+
+      <label>Email</label>
+      <input
+        placeholder='Email'
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+
+      <label>Message</label>
+      <textarea
+        placeholder='Message'
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+      ></textarea>
+
+      <button type='submit'>Submit</button>
+    </form>
   );
 };
 
