@@ -53,12 +53,10 @@ const Navbar = () => {
                   E-Portfolio
                 </a>
               </li>
-              <li>
-                <hr className="dropdown-divider" />
-              </li>
+              
               <li>
                 <a className="dropdown-item" onClick={() => handleScroll('scrollspyHeading5')} href="#scrollspyHeading3">
-                  Fifth
+                  SoulSupport
                 </a>
               </li>
             </ul>

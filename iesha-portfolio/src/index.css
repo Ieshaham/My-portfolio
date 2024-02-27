@@ -215,8 +215,35 @@ h1.form{
 
 /* about page */
 
+.skills-container {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  color: #695a7b;
+  font-size: 18px;
+  text-align: center; 
+}
+
+@media only screen and (min-width: 600px) {
+  .skills-container {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .skills-container {
+    width: 80%;
+    margin: 20px 0;
+  }
+}
+
+
 .about-me-container,
-.skills-container,
 .education-container {
   width: 80%;
   margin: 20px auto;
@@ -232,7 +259,7 @@ h1.form{
 
 @media only screen and (min-width: 600px) {
   .about-me-container,
-  .skills-container,
+
   .education-container {
     width: 60%;
   }
@@ -246,7 +273,6 @@ h1.form{
   }
 
   .about-me-container,
-  .skills-container,
   .education-container {
     width: 80%;
     margin: 20px 0;
@@ -255,8 +281,8 @@ h1.form{
 
 
 .education {
-  text-align: center; /* Align the education content to the left */
-  margin: 20px auto; /* Adjust margin as needed */
+  text-align: center; 
+  margin: 20px auto; 
   
 }
 div.about-me-container{
@@ -264,9 +290,7 @@ div.about-me-container{
   margin-top: 7rem;
 }
 
-div.skills-container{
-  margin-bottom: 7rem;
-}
+
 div.content-container{
   margin-bottom: 10rem;
   margin-top: 15rem;
@@ -279,7 +303,6 @@ div.content-container{
   justify-content: space-around;
 }
 
-/* Style for each education item */
 .education-row > div {
   flex: 1;
   padding: 10px;
@@ -287,7 +310,7 @@ div.content-container{
   margin: 10px; /* Add margin for spacing between items */
 }
 
-/* Add this CSS for the slower bouncing animation */
+/* slower bouncing animation */
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
@@ -300,14 +323,15 @@ div.content-container{
   }
 }
 
-/* Apply the animation to the icons */
+
 .icons {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  animation: bounce 2s infinite; /* Adjust the duration as needed for a slower bounce */
+  animation: bounce 2s infinite; 
   font-size: 5rem;
+  flex-wrap: wrap;
 }
 
 
@@ -340,24 +364,7 @@ div.content-container{
   }
 }
 
-.applications-project1 {
-  display: flex;
-  /* flex-wrap: wrap; */
-  justify-content: space-around;
-  align-items: center;
- 
-}
 
-.applications-project2 {
-  display: flex;
-  /* flex-wrap: wrap; */
-  justify-content: space-around;
-  align-items: center;
-  margin: 27px;
-
-  
- 
-}
 
 div.application{
   font-size: 18px;
@@ -368,12 +375,41 @@ div.application{
   color: #695a7b;
 }
 
+.project-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
 
-.applications-project1 > div {
-  flex: 1;
+.applications-project1,
+.applications-project2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  width: 100%;
+  gap:2px;
+}
+
+.application {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   padding: 10px;
-  box-sizing: border-box;
-  margin: 10px; 
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  flex: 1;
+}
+
+.application:hover {
+  background-color: #e0e0e0;
+}
+
+.application svg {
+  margin-bottom: 5px;
 }
 
 
@@ -402,6 +438,4 @@ div.application{
 
 img{
   height: 300px;
-
-
 }
