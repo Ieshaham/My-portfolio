@@ -156,6 +156,10 @@ form.contact-form{
   margin-bottom: 3rem;
   border-radius: 12px;
 
+
+label{
+  color:#695a7b;
+}
   
 }
 .contact-form {

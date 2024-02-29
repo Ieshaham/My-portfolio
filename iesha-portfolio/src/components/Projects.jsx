@@ -38,6 +38,15 @@ const Projects = () => {
     window.open('https://github.com/4GeeksAcademy/LAGC-finalproject-iesha-luis', '_blank', 'noopener,noreferrer');
   };
 
+  const redirectToDemo2 = () => {
+    window.open('https://ieshaham.com/', '_blank', 'noopener,noreferrer');
+  }
+
+  const redirectToCode2 = () => {
+    window.open('https://github.com/Ieshaham/My-portfolio', '_blank', 'noopener,noreferrer');
+  }
+
+
   return (
     <div className="row row-cols-1 row-cols-md-3 g-4">
       <div className={`col ${isFirstProjectVisible ? 'visible' : 'hidden'}`}>
@@ -81,8 +90,8 @@ const Projects = () => {
                 <div className='application'>React<FontAwesomeIcon icon={faReact} /></div>
               </div>
             <div className='demo-code-button'>
-            <button className='demo-button'>DEMO</button>
-            <button className='code-button'>CODE</button>
+            <button className='demo-button'onClick={redirectToDemo2}>DEMO</button>
+            <button className='code-button'onClick={redirectToCode2} >CODE</button>
 
             </div>
             </div>
