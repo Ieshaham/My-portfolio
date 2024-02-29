@@ -17,7 +17,7 @@ const ContactPage = () => {
       message: message,
     })
     .then(() => {
-      alert("Message has been submitted");
+      alert("Thank you. Your message has been submitted");
     })
     .catch((error) => {
       alert("An error occurred while submitting the message: " + error.message);

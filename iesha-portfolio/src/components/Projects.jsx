@@ -7,7 +7,7 @@ const Projects = () => {
   const [isSecondProjectVisible, setSecondProjectVisible] = useState(false);
   const [isThirdProjectVisible, setThirdProjectVisible] = useState(false);
   
-  
+
   useEffect(() => {
     const timeout1 = setTimeout(() => {
       setFirstProjectVisible(true);
@@ -30,6 +30,14 @@ const Projects = () => {
     };
   }, []);
 
+  const redirectToDemo = () => {
+    window.open('https://voyage-hawk.web.app', '_blank', 'noopener,noreferrer');
+  };
+  
+  const redirectToCode = () => {
+    window.open('https://github.com/4GeeksAcademy/LAGC-finalproject-iesha-luis', '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <div className="row row-cols-1 row-cols-md-3 g-4">
       <div className={`col ${isFirstProjectVisible ? 'visible' : 'hidden'}`}>
@@ -49,6 +57,10 @@ const Projects = () => {
                 <div className='application'><FontAwesomeIcon icon={faGoogle} />GoogleAPI</div>
                 <div className='application'> <FontAwesomeIcon icon={faNodeJs} />Node</div>
               </div>
+            <div className='demo-code-button'>
+            <button className='demo-button'onClick={redirectToDemo}>DEMO</button>
+            <button className='code-button'onClick={redirectToCode} >CODE</button>
+            </div>
             </div>
           </div>
         </div>
@@ -68,6 +80,11 @@ const Projects = () => {
                 <div className='application'>JavaScript<FontAwesomeIcon icon={faJs} /></div>
                 <div className='application'>React<FontAwesomeIcon icon={faReact} /></div>
               </div>
+            <div className='demo-code-button'>
+            <button className='demo-button'>DEMO</button>
+            <button className='code-button'>CODE</button>
+
+            </div>
             </div>
           </div>
         </div>
@@ -75,14 +92,19 @@ const Projects = () => {
 
       <div className={`col ${isThirdProjectVisible ? 'visible' : 'hidden'}`}>
         <div className="card">
-          <img src={process.env.PUBLIC_URL + '/project1.png'} alt="Mental Health Chatbot" className='image1' />
+          <img src={process.env.PUBLIC_URL + '/Untitled design.png'} alt="Mental Health Chatbot" className='image1' />
           <div className="card-body">
             <h5 className="card-title">SoulSupport</h5>
             <p className="card-text">A holistic mental health application designed to provide individuals with the support they need during challenging times. 
             With features including a responsive chatbot for immediate assistance, a mood tracker , and curated resources for accessing additional support,
             SoulSupport aims to empower users on their journey towards mental wellness. </p>
           </div>
+          {/* <div className='demo-code-button'>
+            <button>DEMO</button>
+            <button>CODE</button>
+            </div> */}
         </div>
+        
       </div>
     </div>
   );

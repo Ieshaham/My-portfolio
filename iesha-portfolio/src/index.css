@@ -226,7 +226,8 @@ h1.form{
   border-radius: 6px;
   color: #695a7b;
   font-size: 18px;
-  text-align: center; 
+  position: relative;
+  bottom:3rem;
 }
 
 @media only screen and (min-width: 600px) {
@@ -244,7 +245,8 @@ h1.form{
 
 
 .about-me-container,
-.education-container {
+.education-container
+ {
   width: 80%;
   margin: 20px auto;
   padding: 20px;
@@ -255,6 +257,7 @@ h1.form{
   border-radius: 6px;
   color: #695a7b;
   font-size: 18px;
+  justify-content: space-evenly;
 }
 
 @media only screen and (min-width: 600px) {
@@ -284,6 +287,7 @@ h1.form{
   text-align: center; 
   margin: 20px auto; 
   
+
 }
 div.about-me-container{
   margin-bottom: 7rem;
@@ -380,6 +384,21 @@ div.application{
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
+}
+.demo-code-button{
+  position: relative;
+ margin: auto;
+ top:15px;
+
+}
+
+.demo-button,.code-button{
+
+  justify-content: space-evenly;
+  position: relative;
+  bottom:10px;
+ margin:1rem;
+align-items: center;
 }
 
 .applications-project1,

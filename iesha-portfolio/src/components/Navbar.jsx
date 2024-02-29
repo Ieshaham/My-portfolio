@@ -10,10 +10,12 @@ const Navbar = () => {
     }
   };
 
+  const resumeUrl = "https://firebasestorage.googleapis.com/v0/b/contact-form-portfolio-ed2e5.appspot.com/o/Tech%20resume%20'24%20(1).pdf?alt=media";
+  
   return (
     <div className='navbar'>
       <nav className="navbar">
-        <a className="navbar-brand" href="www.google.com">
+        <a className="navbar-brand"  >
         <FontAwesomeIcon icon={faLaptopCode} />
         </a>
         <ul className="nav nav-pills">
@@ -23,10 +25,11 @@ const Navbar = () => {
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" onClick={() => handleScroll('scrollspyHeading2')} href="#scrollspyHeading2">
-              Resume
-            </a>
-          </li>
+          <a className="nav-link"  href={resumeUrl }target="_blank" rel="noopener noreferrer">
+    Resume
+  </a>
+</li>
+
           <li className="nav-item">
             <a className="nav-link" onClick={() => handleScroll('scrollspyHeading2')} href="#scrollspyHeading4">
               Contact
