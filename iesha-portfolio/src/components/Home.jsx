@@ -30,6 +30,7 @@ const Home = () => {
         <Contact />
       </div>
       <ScrollToTopButton />
+      <footer />
     </div>
   );
 };

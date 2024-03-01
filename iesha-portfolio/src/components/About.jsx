@@ -65,6 +65,7 @@ function MyContent() {
       <MyAboutMe />
       <MySkills />
       <MyEducation />
+      
     </div>
   );
 }
