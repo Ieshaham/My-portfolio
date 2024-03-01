@@ -10,7 +10,6 @@ const ContactPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Add data to Firestore collection
     firestore.collection("contacts").add({
       name: name,
       email: email,

@@ -1,5 +1,5 @@
 import React from 'react';
-import { faLaptopCode } from '@fortawesome/free-solid-svg-icons'; // Corrected import statement
+import { faLaptopCode } from '@fortawesome/free-solid-svg-icons'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Navbar = () => {

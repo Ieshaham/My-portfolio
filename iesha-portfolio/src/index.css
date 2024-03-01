@@ -1,4 +1,4 @@
-/* src/index.css */
+
 
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
@@ -76,8 +76,8 @@ a.nav-link{
 .home-container{
   
   width: 100vw;
-  height: 100%; /* Ensure the container takes the full height of the viewport */
-  overflow-y: auto; /* Add vertical scrollbar if necessary */
+  height: 100%; 
+  overflow-y: auto; /* Add vertical scrollbar  */
   background: linear-gradient(to right,
  
   #ffe4e1 1%,
@@ -93,7 +93,7 @@ a.nav-link{
 
 
 .page-content {
-  padding: 20px; /* Add padding to the content */
+  padding: 20px; 
 }
 
 .name,
@@ -315,7 +315,7 @@ div.content-container{
   flex: 1;
   padding: 10px;
   box-sizing: border-box;
-  margin: 10px; /* Add margin for spacing between items */
+  margin: 10px; 
 }
 
 /* slower bouncing animation */
