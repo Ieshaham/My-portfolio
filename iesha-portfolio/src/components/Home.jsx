@@ -3,19 +3,20 @@ import Contact from './Contact';
 import About from './About';
 import Projects from './Projects';
 import ScrollToTopButton from './ScrollToTop';
-import FloatingBalloons from './FloatingBalloons';
+import LavaLampBackground from './LavaLampBackground'; // Ensure this import is correct
 
 const Home = () => {
   return (
     <div className='home-container'>
       <navbar />
 
-      {/* Add the FloatingBalloons component */}
-      <FloatingBalloons />
+      {/* Add the LavaLampBackground component */}
+      <LavaLampBackground />
 
-      <div className="page-content">
+      <div className="page-content" style={{ position: 'relative' }}>
         <h4 id="scrollspyHeading1"></h4>
         <div className='page-wording'>
+          <p className='heading'>Hello, I'm </p>
           <img className='name_icon' src='name_icon.png' alt="Name Icon" />
           <p className='slogan'>
             A software engineer that<br />
