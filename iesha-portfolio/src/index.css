@@ -119,86 +119,91 @@ a.nav-link {
   padding: 20px; 
 }
 
-
-.slogan,.heading {
+/* Further reduce size for heading and push it higher */
+.heading {
+  font-size: 26px; /* Slightly smaller font */
+  color: #f0f0f0;
+  white-space: pre-line;
+  font-family: 'Playfair Display', serif;
   text-align: center;
+  width: 100%;
   position: relative;
-  top:8rem;
- 
+  top: 8rem; /* Much higher position */
+  margin-bottom: 1rem;
+  z-index: 2; /* Ensure it appears above other elements */
 }
 
-/* .heading{
+img.name_icon {
   position: relative;
-  top:8rem;
-  text-align: center;
-  margin-right: 27rem;
-
-} */
-
-.name_icon {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  width: 35rem;
-  height: fit-content;
+  display: block;
+  max-width: 28rem; /* Your reduced size */
+  width: 100%;
+  margin: 0 auto; /* This centers the element horizontally */
+  top: 8rem;
+  height: auto;
 }
+
+
+/* Adjust slogan position */
+.slogan {
+  font-size: 26px; /* Slightly smaller font */
+  color: #f0f0f0;
+  white-space: pre-line;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  top: 11rem; /* Reduced position */
+  z-index: 2; /* Ensure it appears above other elements */
+}
+
+/* Specific iPhone SE and small mobile optimization */
+@media only screen and (max-width: 600px) {
+  .heading {
+    top: 8rem;
+    font-size: 22px;
+    padding: 0 10px; /* Add some horizontal padding */
+    margin-bottom: 0.5rem;
+  }
+  
+  img.name_icon {
+    max-width: 65%; /* Much smaller for mobile */
+    height: auto;
+    top: 9rem;
+  }
+  
+  .slogan {
+    top: 11rem;
+    font-size: 22px;
+    padding: 0 10px; /* Add some horizontal padding */
+  }
+}
+
+/* Extra small screens like iPhone SE */
+@media only screen and (max-width: 375px) {
+  .heading {
+    top: 8rem;
+    font-size: 20px;
+  }
+  
+  img.name_icon {
+    max-width: 60%; /* Even smaller for iPhone SE */
+    top: 9rem;
+  }
+  
+  .slogan {
+    top: 10rem;
+    font-size: 15px;
+  }
+}
+
+
+
 
 a {
   text-decoration: none;
 }
 
-.name_icon {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  max-width: 35rem;
-  width: 100%;
-  height: fit-content;
-  margin: 0 auto; /* This centers the element horizontally */
-  top: 8rem;
-}
-
-@media only screen and (max-width: 600px) {
-  
-    .name_icon {
-      max-width: 90%; /* Use percentage instead of fixed width */
-      right: 0; /* Remove the right positioning */
-}
-}
-
-.heading {
-  font-size: 27px;
-  color: #f0f0f0;
-  white-space: pre-line;
-  font-family: 'Playfair Display', serif;
-  position: relative;
-  top:7rem;
-}
-
-.slogan {
-  font-size: 27px;
-  color: #f0f0f0;
-  white-space: pre-line;
-  font-family: 'Playfair Display', serif;
-  position: relative;
-  top:11rem;
-}
-
-@media only screen and (max-width: 600px) {
-  .slogan {
-    position: relative;
-    display: flex;
-    justify-content: center;
-  }
-
-  .heading {
-    position: relative;
-    display: flex;
-    justify-content: center;
-  }
- 
-}
- 
 
 
 
