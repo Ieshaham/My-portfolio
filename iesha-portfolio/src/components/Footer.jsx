@@ -8,10 +8,10 @@ const Footer = () => {
       <div className="footer-content">
         <div className="icon-container">
         <a href="https://www.linkedin.com/in/iesha-ham/" target='_blank' rel="noopener noreferrer">
-        <FontAwesomeIcon icon={faLinkedin} style={{ marginRight: '30px' , color: '#695a7b'}}  />
+        <FontAwesomeIcon icon={faLinkedin} style={{ marginRight: '30px' , color: 'black'}}  />
         </a>
         <a href="https://github.com/Ieshaham" target='_blank' rel="noopener noreferrer">
-         <FontAwesomeIcon icon={faGithub} style={{color: '#695a7b'}} />
+         <FontAwesomeIcon icon={faGithub} style={{color: 'black'}} />
         </a>
         </div>
         <div className="text-container">

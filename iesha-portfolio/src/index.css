@@ -270,7 +270,8 @@ button {
 }
 
 button:hover {
-  background-color: #8c8188;
+  background-color: white;
+  color: black;
 }
 
 
@@ -460,6 +461,10 @@ div.application{
  margin: auto;
  top:15px;
 
+}
+
+.demo-button:hover{
+  border: 2px solid black;
 }
 
 .demo-button,.code-button{

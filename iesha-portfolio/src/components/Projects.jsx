@@ -1,12 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { faHtml5, faCss3, faJs, faReact, faNodeJs, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import TravelHawkDetails from './TravelHawkDetails';
+import { useNavigate } from 'react-router-dom';
 
 const Projects = () => {
   const [isFirstProjectVisible, setFirstProjectVisible] = useState(false);
   const [isSecondProjectVisible, setSecondProjectVisible] = useState(false);
   const [isThirdProjectVisible, setThirdProjectVisible] = useState(false);
   
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  const handleTravelHawkDetailsClick = () => {
+    navigate('/TravelHawkDetails'); // Navigate programmatically
+  };
 
   useEffect(() => {
     const timeout1 = setTimeout(() => {
@@ -67,15 +74,16 @@ const Projects = () => {
                 <div className='application'> <FontAwesomeIcon icon={faNodeJs} />Node</div>
               </div>
             <div className='demo-code-button'>
-            <button className='demo-button'onClick={redirectToDemo}>DEMO</button>
-            <button className='code-button'onClick={redirectToCode} >CODE</button>
+            <button className='demo-button' onClick={handleTravelHawkDetailsClick}>View Details</button> 
+              
+            {/* <button className='code-button'onClick={redirectToCode} >CODE</button> */}
             </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className={`col ${isSecondProjectVisible ? 'visible' : 'hidden'}`}>
+      {/* <div className={`col ${isSecondProjectVisible ? 'visible' : 'hidden'}`}>
         <div className="card">
           <img src={process.env.PUBLIC_URL + '/Screenshot 2024-02-07 185153.png'} alt="Personal Portfolio" className='image2' />
           <div className="card-body">
@@ -97,7 +105,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className={`col ${isThirdProjectVisible ? 'visible' : 'hidden'}`}>
         <div className="card">
