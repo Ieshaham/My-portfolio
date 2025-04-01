@@ -48,10 +48,10 @@ const Navbar = () => {
             <ul className="dropdown-menu">
               <li>
                 <a className="dropdown-item" onClick={() => handleScroll('scrollspyHeading3')} href="#scrollspyHeading3">
-                  Voyage Hawk
+                  Travel Hawk
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a className="dropdown-item" onClick={() => handleScroll('scrollspyHeading4')} href="#scrollspyHeading3">
                   E-Portfolio
                 </a>
@@ -61,7 +61,7 @@ const Navbar = () => {
                 <a className="dropdown-item" onClick={() => handleScroll('scrollspyHeading5')} href="#scrollspyHeading3">
                   SoulSupport
                 </a>
-              </li>
+              </li> */}
             </ul>
           </li>
         </ul>

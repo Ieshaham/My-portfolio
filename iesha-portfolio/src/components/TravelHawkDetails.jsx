@@ -1,54 +1,53 @@
 import React, { useState, useEffect } from 'react';
 
 function TravelHawkDetails() {
-  // State to track if we're on mobile
-  const [isMobile, setIsMobile] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
 
-  // Check window width on mount and resize
-  useEffect(() => {
-    const checkIfMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    
-    // Initial check
-    checkIfMobile();
-    
-    // Add event listener
-    window.addEventListener('resize', checkIfMobile);
-    
-    // Cleanup
-    return () => window.removeEventListener('resize', checkIfMobile);
-  }, []);
+    useEffect(() => {
+        const checkIfMobile = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
 
-  return (
-    <main>
-      <div
-        style={{
-          fontFamily: 'Inter, system-ui, sans-serif',
-          margin: '0',
-          padding: '40px 20px',
-          backgroundColor: '#121212',
-          color: '#f5f5f5',
-          minHeight: '100vh',
-          width: '100%',
-          boxSizing: 'border-box'
-        }}
-      >
-        <div style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
-        }}>
-          {/* Make title more visible on mobile */}
-          <h1 style={{ 
-            fontSize: 'clamp(2.5rem, 8vw, 3rem)', 
-            marginBottom: '20px',
-            color: 'white',
-            fontWeight: '700',
-            textShadow: '0 0 15px rgba(77, 141, 245, 0.5)',
-            textAlign: isMobile ? 'center' : 'left'
-          }}>
-            Travel Hawk
-          </h1>
+        checkIfMobile();
+
+        window.addEventListener('resize', checkIfMobile);
+
+        return () => window.removeEventListener('resize', checkIfMobile);
+    }, []);
+
+    // Assuming your nav bar height is 60px. Adjust as needed.
+    const navBarHeight = 60;
+
+    return (
+        <main>
+            <div
+                style={{
+                    fontFamily: 'Inter, system-ui, sans-serif',
+                    margin: '0',
+                    padding: `${40 + navBarHeight}px 20px 40px 20px`, // Added navBarHeight to top padding
+                    backgroundColor: '#121212',
+                    color: '#f5f5f5',
+                    minHeight: '100vh',
+                    width: '100%',
+                    boxSizing: 'border-box',
+                }}
+            >
+                <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+                    <h1
+                        style={{
+                            fontSize: 'clamp(2.5rem, 8vw, 3rem)',
+                            marginTop: '2rem',
+                            marginBottom: '20px',
+                            color: 'white',
+                            fontWeight: '700',
+                            textAlign: isMobile ? 'center' : 'left',
+                            '@media (max-width: 600px)': {
+                                marginTop: '1rem',
+                            },
+                        }}
+                    >
+                        Travel Hawk
+                    </h1>
           
           <p style={{ 
             fontSize: 'clamp(1rem, 4vw, 1.2rem)', 

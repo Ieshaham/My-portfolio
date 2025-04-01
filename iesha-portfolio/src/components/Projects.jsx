@@ -37,23 +37,6 @@ const Projects = () => {
     };
   }, []);
 
-  const redirectToDemo = () => {
-    window.open('https://voyage-hawk.web.app', '_blank', 'noopener,noreferrer');
-  };
-  
-  const redirectToCode = () => {
-    window.open('https://github.com/4GeeksAcademy/LAGC-finalproject-iesha-luis', '_blank', 'noopener,noreferrer');
-  };
-
-  const redirectToDemo2 = () => {
-    window.open('https://ieshaham.com/', '_blank', 'noopener,noreferrer');
-  }
-
-  const redirectToCode2 = () => {
-    window.open('https://github.com/Ieshaham/My-portfolio', '_blank', 'noopener,noreferrer');
-  }
-
-
   return (
     <div className="row row-cols-1 row-cols-md-3 g-4">
       <div className={`col ${isFirstProjectVisible ? 'visible' : 'hidden'}`}>
@@ -70,46 +53,6 @@ const Projects = () => {
 </div>
 
 
-      {/* <div className={`col ${isSecondProjectVisible ? 'visible' : 'hidden'}`}>
-        <div className="card">
-          <img src={process.env.PUBLIC_URL + '/Screenshot 2024-02-07 185153.png'} alt="Personal Portfolio" className='image2' />
-          <div className="card-body">
-            <h5 className="card-title">E-Portfolio</h5>
-            <p className="card-text">Explore my curated portfolio showcasing achievements in various technology domains. 
-            With a polished interface, navigate through projects reflecting my dedication to pioneering solutions in software development and creating user-friendly interfaces.</p>
-            <div className='project-buttons'>
-              <div className="applications-project2">
-                <div className='application'>HTML <FontAwesomeIcon icon={faHtml5} />  </div>  
-                <div className='application'>CSS<FontAwesomeIcon icon={faCss3} /></div>
-                <div className='application'>JavaScript<FontAwesomeIcon icon={faJs} /></div>
-                <div className='application'>React<FontAwesomeIcon icon={faReact} /></div>
-              </div>
-            <div className='demo-code-button'>
-            <button className='demo-button'onClick={redirectToDemo2}>DEMO</button>
-            <button className='code-button'onClick={redirectToCode2} >CODE</button>
-
-            </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
-      <div className={`col ${isThirdProjectVisible ? 'visible' : 'hidden'}`}>
-        <div className="card">
-          <img src={process.env.PUBLIC_URL + '/Untitled design.png'} alt="Mental Health Chatbot" className='image1' />
-          <div className="card-body">
-            <h5 className="card-title">SoulSupport</h5>
-            <p className="card-text">A holistic mental health application designed to provide individuals with the support they need during challenging times. 
-            With features including a responsive chatbot for immediate assistance, a mood tracker , and curated resources for accessing additional support,
-            SoulSupport aims to empower users on their journey towards mental wellness. </p>
-          </div>
-          {/* <div className='demo-code-button'>
-            <button>DEMO</button>
-            <button>CODE</button>
-            </div> */}
-        </div>
-        
-      </div>
     </div>
   );
 }
