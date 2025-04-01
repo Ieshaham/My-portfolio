@@ -10,7 +10,7 @@ const Navbar = () => {
     }
   };
 
-  const resumeUrl = "https://firebasestorage.googleapis.com/v0/b/contact-form-portfolio-ed2e5.appspot.com/o/Tech%20resume%20'25%20(1).pdf?alt=media";
+  const resumeUrl = "https://firebasestorage.googleapis.com/v0/b/contact-form-portfolio-ed2e5.appspot.com/o/Tech%20resume%20'25%20(1).docx.pdf?alt=media";
   
   return (
     <div className='navbar'>

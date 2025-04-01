@@ -37,6 +37,15 @@ body {
 html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+main {
+  min-height: 100vh; /* Ensures the main content takes full height */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Main Navbar */
@@ -99,7 +108,7 @@ a.nav-link {
 .home-container{
   
   width: 100vw;
-  height: 100%; 
+  height: 100vh; 
   overflow-y: auto; /* Add vertical scrollbar  */
   background-color: black;
 
@@ -197,13 +206,97 @@ img.name_icon {
   }
 }
 
-
-
-
 a {
   text-decoration: none;
 }
 
+
+
+/* project style */
+.project-card {
+  border: none; /* Removes card border */
+  position: relative;
+  background: none; /* Ensure no white background */
+  display: flex;
+  justify-content: center; /* Center the image */
+}
+
+.image-container {
+  position: relative;
+  display: inline-block; /* Ensures it wraps around the image */
+  width: 70%; /* Set image width to 60% */
+  max-width: 600px; /* Prevents it from getting too big on large screens */
+  overflow: hidden;
+  background: transparent; /* No white background */
+}
+
+.project-image {
+  width: 100%; /* Ensures it takes up the container width */
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover .project-image {
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Make it cover the full image */
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.view-details-button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.view-details-button:hover {
+  background-color: #f8f8f8;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .image-container {
+    width: 80%; /* Increase size on smaller screens for better visibility */
+  }
+
+  .view-details-button {
+    font-size: 14px; /* Adjust button size */
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-container {
+    width: 90%; /* Make it more visible on mobile */
+  }
+
+  .view-details-button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
 
 
 
