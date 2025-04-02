@@ -57,7 +57,8 @@ function TravelHawkDetails() {
             lineHeight: '1.6',
             textAlign: isMobile ? 'center' : 'left'
           }}>
-            A next-generation travel discovery app that helps adventurers find hidden gems and authentic experiences based on their preferences and travel style.
+            Travel Hawk is a comprehensive travel discovery app that leverages Google API and MapKit to help users find and navigate to ideal destinations and local experiences.
+            
           </p>
 
           {/* Section for Description */}
@@ -86,10 +87,11 @@ function TravelHawkDetails() {
               border: '1px solid rgba(255, 255, 255, 0.1)'
             }}>
               <p style={{ lineHeight: '1.8', marginBottom: '20px' }}>
-                Travel Hawk is an AI-powered travel discovery platform designed to connect travelers with personalized, authentic experiences around the world. Using a combination of machine learning, local expert curation, and social recommendations, the app helps users discover destinations, activities, and accommodations that match their unique travel preferences and style.
-              </p>
-              <p style={{ lineHeight: '1.8' }}>
-                The platform aims to transform the way people explore new places by surfacing lesser-known attractions, local favorites, and seasonal experiences that traditional travel resources often miss.
+      
+              {/* <p style={{ lineHeight: '1.8' }}> */}
+              Travel Hawk is an iOS application designed to transform how travelers discover new places. Built with <b>Swift</b> and <b>UIKi</b>, this intuitive discovery platform leverages the <b>Google Places API</b> to help users find hotels, restaurants, cafés, and other points of interest with comprehensive details including operating hours, high-quality photos, detailed descriptions, and seamless <b>MapKit integration</b> for real-time navigation and location services.
+              The app prioritizes user experience through a clean interface built on a <b>MVVM architecture</b> that makes exploring new destinations effortless. Travel Hawk implements <b>Core Data</b> for offline storage capabilities, allowing travelers to access saved locations without an internet connection. The application features efficient <b>RESTful API</b> calls with robust error handling, <b>custom UI components</b> for consistent design language, and location-based services using <b>CoreLocation</b> to display proximity to attractions,
+               making Travel Hawk the perfect companion for both spontaneous explorers and meticulous planners.
               </p>
             </div>
           </div>
