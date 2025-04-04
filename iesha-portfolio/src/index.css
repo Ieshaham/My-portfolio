@@ -97,7 +97,7 @@ a.nav-link {
 }
 
 .navbar-brand:hover {
-  color: #b1a7ab;
+  color: #797677;
 }
 
 .navbar:hover {
@@ -303,7 +303,7 @@ a {
 /* contact page css */
 
 form.contact-form{
-  background-color: #f0f0f0;
+  
   width:75%;
   margin: auto;
   margin-top: 10rem;
@@ -312,7 +312,7 @@ form.contact-form{
 
 
 label{
-  color:black;
+  color:white;
 }
   
 }
@@ -369,7 +369,7 @@ button:hover {
 
 
 h1.form{
-  color: black;
+  color: white;
 }
 
 /* about page */
@@ -379,11 +379,7 @@ h1.form{
   margin: 20px auto;
   padding: 20px;
   box-sizing: border-box;
-  background-color: #f0f0f0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 1px solid #ccc;
   border-radius: 6px;
-  color: black;
   font-size: 18px;
   position: relative;
   bottom:3rem;
@@ -410,11 +406,6 @@ h1.form{
   margin: 20px auto;
   padding: 20px;
   box-sizing: border-box;
-  background-color: #f0f0f0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  color: black;
   font-size: 18px;
   justify-content: space-evenly;
 }

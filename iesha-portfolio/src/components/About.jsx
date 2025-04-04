@@ -8,7 +8,9 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function MyAboutMe() {
   return (
-    <div className="about-me-container">
+    <div className="about-me-container"style={{backgroundColor: 'rgba(255, 255, 255, 0.05)',
+      borderRadius: '8px',
+      border: '1px solid rgba(255, 255, 255, 0.1)',color:'white'}}>
       <h5>Who I am!</h5>
       <div className='about-me-paragraph'>
         <p>
@@ -24,7 +26,9 @@ function MyAboutMe() {
 
 function MySkills() {
   return (
-    <div className="skills-container">
+    <div className="skills-container"style={{backgroundColor: 'rgba(255, 255, 255, 0.05)',
+      borderRadius: '8px',
+      border: '1px solid rgba(255, 255, 255, 0.1)',color:'white'}}>
       <h5>Skills</h5>
       <div className='icons'>
         <div className='html translate-infinite'><FontAwesomeIcon icon={faHtml5}  /></div>
@@ -39,7 +43,9 @@ function MySkills() {
 
 function MyEducation() {
   return (
-    <div className="education-container">
+    <div className="education-container"style={{backgroundColor: 'rgba(255, 255, 255, 0.05)',
+      borderRadius: '8px',
+      border: '1px solid rgba(255, 255, 255, 0.1)',color:'white'}}>
       <h5>Education</h5>
       <div className='education'>
       <div className="education-row">

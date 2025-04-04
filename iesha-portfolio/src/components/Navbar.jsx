@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <div className='navbar'>
       <nav className="navbar">
-        <a className="navbar-brand"  >
+        <a className="navbar-brand" href='./' >
         <FontAwesomeIcon icon={faLaptopCode} />
         </a>
         <ul className="nav nav-pills">

@@ -29,7 +29,9 @@ const ContactPage = () => {
   };
 
   return (
-    <form className='contact-form' onSubmit={handleSubmit}>
+    <form className='contact-form' onSubmit={handleSubmit}style={{backgroundColor: 'rgba(255, 255, 255, 0.05)',
+      borderRadius: '8px',
+      border: '1px solid rgba(255, 255, 255, 0.1)',color:'white'}}>
       <h1 className='form'>Connect with me!</h1>
       <div className='form-container'>
         <div className='form-group'>
