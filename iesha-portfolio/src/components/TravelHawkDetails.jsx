@@ -140,7 +140,7 @@ function TravelHawkDetails() {
             </div>
           </div>
 
-          {/* Section for Research */}
+          {/* Section for Research
           <div style={{ 
             display: 'flex', 
             flexDirection: isMobile ? 'column' : 'row',
@@ -169,9 +169,9 @@ function TravelHawkDetails() {
                 Extensive research was conducted to understand travelers' needs, pain points, and behaviors. Key findings included insights on personalization requirements, content credibility factors, and the ideal balance between algorithmic recommendations and human curation.
               </p>
             </div>
-          </div>
+          </div> */}
 
-          {/* Section for Prototype */}
+          {/* Section for Prototype
           <div style={{ 
             display: 'flex', 
             flexDirection: isMobile ? 'column' : 'row',
@@ -200,7 +200,7 @@ function TravelHawkDetails() {
                 Based on our research, we developed a prototype focusing on personalized discovery, local expert integration, and seamless trip planning. The interface was designed to surface relevant content based on the user's stated preferences and implicit behavior patterns.
               </p>
             </div>
-          </div>
+          </div> */}
 
           {/* Section for Demo */}
           <div style={{ 
