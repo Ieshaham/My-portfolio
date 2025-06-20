@@ -8,6 +8,7 @@ import Contact from './components/Contact';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 import TravelHawkDetails from './components/TravelHawkDetails';
+import ChefZuriDetails from './components/ChefZuriDetails';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/TravelHawkDetails" element={<TravelHawkDetails />} />
+          <Route path="/ChefZuriDetails" element={<ChefZuriDetails />} />
         </Routes>
         <Footer />
       </div>

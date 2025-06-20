@@ -50,6 +50,9 @@ const Navbar = () => {
                 <a className="dropdown-item" onClick={() => handleScroll('scrollspyHeading3')} href="#scrollspyHeading3">
                   Travel Hawk
                 </a>
+                 <a className="dropdown-item" onClick={() => handleScroll('scrollspyHeading3')} href="#scrollspyHeading3">
+                  Chef Zuri
+                </a>
               </li>
               {/* <li>
                 <a className="dropdown-item" onClick={() => handleScroll('scrollspyHeading4')} href="#scrollspyHeading3">

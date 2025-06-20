@@ -50,10 +50,24 @@ const Projects = () => {
       </div>
     </div>
   </div>
+
 </div>
 
-
+{/* Second Project */}
+  <div className={`col ${isSecondProjectVisible ? 'visible' : 'hidden'}`}>
+    <div className="card project-card">
+      <div className="image-container">
+        <img src={process.env.PUBLIC_URL + '/project2.png'} alt="Chef Zuri" className="project-image" />
+        <div className="overlay">
+          <button className="view-details-button" onClick={() => navigate('/ChefZuriDetails')}>
+            View Details
+          </button>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
+
   );
 }
 
