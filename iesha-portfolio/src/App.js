@@ -9,6 +9,7 @@ import Projects from './components/Projects';
 import Footer from './components/Footer';
 import TravelHawkDetails from './components/TravelHawkDetails';
 import ChefZuriDetails from './components/ChefZuriDetails';
+import ReceiptAnalyzer from './components/ReceiptAnalyzer';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/projects" element={<Projects />} />
           <Route path="/TravelHawkDetails" element={<TravelHawkDetails />} />
           <Route path="/ChefZuriDetails" element={<ChefZuriDetails />} />
+          <Route path="/ReceiptAnalyzer" element={<ReceiptAnalyzer />} />
         </Routes>
         <Footer />
       </div>

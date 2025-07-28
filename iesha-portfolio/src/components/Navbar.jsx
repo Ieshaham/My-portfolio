@@ -54,13 +54,13 @@ const Navbar = () => {
                   Chef Zuri
                 </a>
               </li>
-              {/* <li>
-                <a className="dropdown-item" onClick={() => handleScroll('scrollspyHeading4')} href="#scrollspyHeading3">
-                  E-Portfolio
+              <li>
+                <a className="dropdown-item" onClick={() => handleScroll('scrollspyHeading3')} href="#scrollspyHeading3">
+                  AI Receipt Analyzer
                 </a>
               </li>
               
-              <li>
+              {/* <li>
                 <a className="dropdown-item" onClick={() => handleScroll('scrollspyHeading5')} href="#scrollspyHeading3">
                   SoulSupport
                 </a>
