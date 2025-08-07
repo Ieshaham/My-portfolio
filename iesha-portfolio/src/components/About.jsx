@@ -3,8 +3,9 @@
 
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHtml5, faCss3Alt, faJs, faReact, faNodeJs } from '@fortawesome/free-brands-svg-icons';
+import { faHtml5, faCss3Alt, faJs, faReact, faNodeJs, faAws,faPython} from '@fortawesome/free-brands-svg-icons';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 function MyAboutMe() {
   return (
@@ -36,6 +37,8 @@ function MySkills() {
         <div className='javascript translate-infinite'><FontAwesomeIcon icon={faJs} /></div>
         <div className='react translate-infinite'><FontAwesomeIcon icon={faReact} /></div>
         <div className='node translate-infinite'><FontAwesomeIcon icon={faNodeJs} /></div>
+        <div className='aws translate-infinite'><FontAwesomeIcon icon={faAws} /></div>
+       <div className='aws translate-infinite'><FontAwesomeIcon icon= {faPython} /></div>
       </div>
     </div>
   );
