@@ -289,7 +289,7 @@ function QuizTopia() {
                                     fontWeight: '600',
                                 }}
                             >
-                                Demo
+                                Quiz Demo
                             </h2>
                         </div>
                         <div
@@ -322,9 +322,72 @@ function QuizTopia() {
                                         boxShadow: '0 0 20px rgba(255, 255, 255, 0.1)',
                                     }}
                                 >
-                                    <source src="/quiztopia-demo.mp4" type="video/mp4" />
+                                    <source src="/demo-quiz.mov" type="video/mp4" />
                                     Your browser does not support the video tag.
                                 </video>
+                               
+                            
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: isMobile ? 'column' : 'row',
+                            marginBottom: '60px',
+                            gap: isMobile ? '15px' : '40px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                flex: isMobile ? '1' : '0 0 200px',
+                            }}
+                        >
+                            <h2
+                                style={{
+                                    fontSize: 'clamp(1.4rem, 3vw, 1.8rem)',
+                                    color: 'white',
+                                    fontWeight: '600',
+                                }}
+                            >
+                                Dashboard Demo
+                            </h2>
+                        </div>
+                        <div
+                            style={{
+                                flex: '1',
+                                backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                                padding: 'clamp(15px, 3vw, 30px)',
+                                borderRadius: '8px',
+                                border: '1px solid rgba(255, 255, 255, 0.1)',
+                            }}
+                        >
+                            {/* Video Container */}
+                            <div style={{
+                                position: 'relative',
+                                width: '100%',
+                                height: 'clamp(300px, 40vw, 500px)',
+                                overflow: 'hidden',
+                                borderRadius: '8px',
+                                backgroundColor: '#565c63'
+                            }}>
+                                <video
+                                    controls
+                                    style={{
+                                        width: '100%',
+                                        height: '100%',
+                                        objectFit: 'contain',
+                                        borderRadius: '8px',
+                                        backgroundColor: '#000',
+                                        filter: 'blur(0px)',
+                                        boxShadow: '0 0 20px rgba(255, 255, 255, 0.1)',
+                                    }}
+                                >
+                                    <source src="/dashboard-demo.mov" type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                               
+                            
                             </div>
                         </div>
                     </div>
