@@ -52,15 +52,21 @@ function MyEducation() {
       <h5>Education</h5>
       <div className='education'>
       <div className="education-row">
-        <p className='mdc'>
-          <b>Miami-Dade College</b> <br />
-          Bachelor's of Science in Information Systems Technology<br />
-          Concentration: Software Engineering<br />
-          Expected Graduation: December 2025
-        </p>
         <p className='FIU'>
           <b>Florida International University</b> <br />
           Bachelor's of Arts in Psychology
+        </p>
+         <p className='mdc'>
+          <b>Miami-Dade College</b> <br />
+          Bachelor of Science in Information Systems Technology<br />
+          Concentration: Software Engineering<br />
+          Graduated: December 2025
+        </p>
+         <p className='gatech'>
+          <b>Georgia Institute of Technology</b> <br />
+          Master of Science in Computer Science<br />
+          Concentration: Artifical Intelligence<br />
+          Expected Graduation: December 2027
         </p>
         </div>
       </div>

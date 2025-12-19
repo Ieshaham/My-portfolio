@@ -88,7 +88,7 @@ const Projects = () => {
    <div className={`col ${isForthProjectVisible ? 'visible' : 'hidden'}`}>
     <div className="card project-card">
       <div className="image-container">
-        <img src={process.env.PUBLIC_URL + '/project3.png'} alt="QuizTopia" className="project-image" />
+        <img src={process.env.PUBLIC_URL + '/project4.png'} alt="QuizTopia" className="project-image" />
         <div className="overlay">
           <button className="view-details-button" onClick={() => navigate('/Quiztopia')}>
             View Details
