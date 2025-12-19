@@ -214,7 +214,7 @@ function ReceiptAnalyzer() {
                                         boxShadow: '0 0 20px rgba(255, 255, 255, 0.1)',
                                     }}
                                 >
-                                    <source src="/chef-zuri-demo.mp4" type="video/mp4" />
+                                    <source src="/ai-receipt-demo.mov" type="video/mp4" />
                                     Your browser does not support the video tag.
                                 </video>
                             </div>

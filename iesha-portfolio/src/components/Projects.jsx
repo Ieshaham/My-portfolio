@@ -8,6 +8,7 @@ const Projects = () => {
   const [isFirstProjectVisible, setFirstProjectVisible] = useState(false);
   const [isSecondProjectVisible, setSecondProjectVisible] = useState(false);
   const [isThirdProjectVisible, setThirdProjectVisible] = useState(false);
+  const [isForthProjectVisible, setForthProjectVisible] = useState(false);
   
   const navigate = useNavigate(); // Initialize useNavigate
 
@@ -28,12 +29,15 @@ const Projects = () => {
       setThirdProjectVisible(true);
     }, 1000);
 
- 
+     const timeout4 = setTimeout(() => {
+      setForthProjectVisible(true);
+    }, 1000);
+
     return () => {
       clearTimeout(timeout1);
       clearTimeout(timeout2);
       clearTimeout(timeout3);
-     
+      clearTimeout(timeout4);
     };
   }, []);
 
@@ -67,12 +71,26 @@ const Projects = () => {
     </div>
   </div>
 
+{/* Third Project */}
   <div className={`col ${isThirdProjectVisible ? 'visible' : 'hidden'}`}>
     <div className="card project-card">
       <div className="image-container">
         <img src={process.env.PUBLIC_URL + '/project3.png'} alt="AI Receipt Analyzer" className="project-image" />
         <div className="overlay">
           <button className="view-details-button" onClick={() => navigate('/ReceiptAnalyzer')}>
+            View Details
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <div className={`col ${isForthProjectVisible ? 'visible' : 'hidden'}`}>
+    <div className="card project-card">
+      <div className="image-container">
+        <img src={process.env.PUBLIC_URL + '/project3.png'} alt="QuizTopia" className="project-image" />
+        <div className="overlay">
+          <button className="view-details-button" onClick={() => navigate('/Quiztopia')}>
             View Details
           </button>
         </div>

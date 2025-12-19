@@ -80,11 +80,11 @@ const Navbar = () => {
                 </a>
               </li>
               
-              {/* <li>
-                <a className="dropdown-item" onClick={() => handleScroll('scrollspyHeading5')} href="#scrollspyHeading3">
-                  SoulSupport
+              <li>
+                <a className="dropdown-item" onClick={() => handleScroll('scrollspyHeading3')} href="#scrollspyHeading3">
+                  QuizTopia
                 </a>
-              </li> */}
+              </li>
             </ul>
           </li>
         </ul>
